@@ -305,6 +305,9 @@
     "bulletPrefab": {
       "__uuid__": "37d8404d-703b-4fc8-a31d-a206a2614bf4"
     },
+    "enemyPrefab": {
+      "__uuid__": "3cf1c7db-7c83-40dd-bd0b-80c300cf4049"
+    },
     "bulletInterval": 0.04,
     "bulletSpeedCoefficient": 801,
     "bulletSpeedIntercept": 30,

@@ -17,6 +17,10 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
+        enemyPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
         //两颗子弹的发射间隔
         bulletInterval: 500,
         //子弹速度斜率
@@ -26,7 +30,20 @@ cc.Class({
         //子弹发射角速度
         w : 0.1
     },
-
+    //test
+    spawnEnemy: function () {
+        cc.log("spawn new Enemy");
+        var positionX = cc.randomMinus1To1() * this.node.width / 2;
+        var positionY = cc.randomMinus1To1() * this.node.height / 2;
+        var newEnemy = cc.instantiate(this.enemyPrefab);
+        this.node.addChild(newEnemy);
+        newEnemy.setPosition(cc.p(positionX, positionY));
+        // pass Game instance to star
+        newEnemy.getComponent('enemy').init(this);
+    },
+    test: function() {
+        this.node.width = 3;
+    },
     // use this for initialization
     onLoad: function () {
         //总计时器
@@ -36,7 +53,12 @@ cc.Class({
         //计数器
         this.i = -1;
         //存储子弹数组
-        this.newBullets = new Array();
+        this.newBullets = [];
+        //Generate Enemies
+        this.spawnEnemy();
+        // Collision System
+        cc.director.getCollisionManager().enabled = true;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -53,7 +75,10 @@ cc.Class({
             this.shootNewBullet(this.bulletSpeedCoefficient, this.bulletSpeedIntercept, (this.T - this.T%this.bulletInterval), this.w);
         }
     },
-
+    onDisable: function () {
+        cc.director.getCollisionManager().enabled = false;
+        cc.director.getCollisionManager().enabledDebugDraw = false;
+    },
     //生成新子弹的函数
     shootNewBullet: function(speedCoefficient, speedIntercept, T, w) {
         //子弹数组存储新子弹
