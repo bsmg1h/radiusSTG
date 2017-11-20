@@ -21,9 +21,10 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         //随机给定子弹速度
-        this.speed = cc.random0To1() * 500 + 100;
+        this.speed = 370;
         //随机给定子弹倾角
-        this.theta = cc.random0To1() * 2 * Math.PI;
+        var t = new Date().getTime() / 100;
+        this.theta = t * t / 180 * Math.PI;
     },
 
     // called every frame, uncomment this function to activate update callback
