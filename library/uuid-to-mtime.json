@@ -310,13 +310,13 @@
     "relativePath": "textures/star.png"
   },
   "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f": {
-    "asset": 1511195393685,
-    "meta": 1511195398945,
+    "asset": 1511207395474,
+    "meta": 1511207395497,
     "relativePath": "bullet.prefab"
   },
   "55529bde-6ab2-44c0-99d7-e222168652f8": {
-    "asset": 1511195393686,
-    "meta": 1511195399042,
+    "asset": 1511207453477,
+    "meta": 1511207453488,
     "relativePath": "game.fire"
   },
   "4f565172-7101-46af-a2e2-f58acb025c84": {
