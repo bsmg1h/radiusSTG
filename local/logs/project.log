@@ -1,169 +1,52 @@
-2017-11-20T16:01:49.568Z - normal: Load ~/.CocosCreator/settings.json
-2017-11-20T16:01:49.572Z - normal: checking language setting...
-2017-11-20T16:01:49.573Z - normal: Language: zh
-2017-11-20T16:01:51.569Z - success: protocol editor-framework registered
-2017-11-20T16:01:51.569Z - success: protocol app registered
-2017-11-20T16:01:51.570Z - success: protocol theme registered
-2017-11-20T16:01:51.570Z - success: protocol profile registered
-2017-11-20T16:01:51.570Z - success: protocol packages registered
-2017-11-20T16:01:51.570Z - success: protocol unpack registerred
-2017-11-20T16:01:51.570Z - success: protocol disable-commonjs registerred
-2017-11-20T16:01:51.974Z - normal: connected!
-2017-11-20T16:01:51.975Z - normal: Check project D:\Cocos\radiusSTG
-2017-11-20T16:01:51.978Z - normal: Initializing Cocos2d
-2017-11-20T16:01:52.236Z - normal: Initializing Asset Database
-2017-11-20T16:01:52.275Z - success: protocol uuid registerred
-2017-11-20T16:01:52.275Z - success: protocol db registerred
-2017-11-20T16:01:52.275Z - success: protocol thumbnail registerred
-2017-11-20T16:01:52.275Z - normal: Loading editor/builtin packages
-2017-11-20T16:01:52.302Z - success: anysdk loaded
-2017-11-20T16:01:52.467Z - success: assets loaded
-2017-11-20T16:01:52.469Z - success: builder loaded
-2017-11-20T16:01:52.473Z - success: hierarchy loaded
-2017-11-20T16:01:52.477Z - success: inspector loaded
-2017-11-20T16:01:52.479Z - success: keystore loaded
-2017-11-20T16:01:52.482Z - success: node-library loaded
-2017-11-20T16:01:52.485Z - success: package-asset loaded
-2017-11-20T16:01:52.487Z - success: preferences loaded
-2017-11-20T16:01:52.489Z - success: project-exporter loaded
-2017-11-20T16:01:52.505Z - success: project-importer loaded
-2017-11-20T16:01:52.507Z - success: project-settings loaded
-2017-11-20T16:01:52.511Z - success: ui-kit loaded
-2017-11-20T16:01:52.513Z - success: ui-grid loaded
-2017-11-20T16:01:52.520Z - success: scene loaded
-2017-11-20T16:01:52.521Z - success: sprite-editor loaded
-2017-11-20T16:01:52.526Z - success: store loaded
-2017-11-20T16:01:52.532Z - success: timeline loaded
-2017-11-20T16:01:52.532Z - normal: Loading builtin packages
-2017-11-20T16:01:52.535Z - success: asset-db-debugger loaded
-2017-11-20T16:01:52.536Z - success: color-picker loaded
-2017-11-20T16:01:52.540Z - success: console loaded
-2017-11-20T16:01:52.543Z - success: package-manager loaded
-2017-11-20T16:01:52.547Z - success: sdkbox loaded
-2017-11-20T16:01:52.549Z - success: tester loaded
-2017-11-20T16:01:52.552Z - success: ui-kit-preview-extra loaded
-2017-11-20T16:01:52.555Z - success: ui-kit-preview loaded
-2017-11-20T16:01:52.558Z - success: ui-tree loaded
-2017-11-20T16:01:53.677Z - normal: Initializing project D:\Cocos\radiusSTG
-2017-11-20T16:01:53.682Z - normal: Loading packages
-2017-11-20T16:01:53.690Z - normal: Watching packages
-2017-11-20T16:01:53.708Z - normal: Run Application
-2017-11-20T16:01:55.484Z - success: preview server running at http://localhost:7456
-2017-11-20T16:02:01.227Z - normal: 1.6.2
-2017-11-20T16:02:06.311Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
-2017-11-20T16:02:06.312Z - normal: Simulator: WORKAREA WIDTH 1520.00, HEIGHT 765.00
-2017-11-20T16:02:06.312Z - normal: Simulator: FRAME SCALE = 1.00
-2017-11-20T16:02:06.540Z - normal: Simulator: Ready for GLSL
-2017-11-20T16:02:06.540Z - normal: Simulator: Ready for OpenGL 2.0
-2017-11-20T16:02:06.542Z - normal: Simulator: 
-2017-11-20T16:02:06.542Z - normal: Simulator: {
-2017-11-20T16:02:06.542Z - normal: Simulator: 	gl.version: 4.5.0 NVIDIA 369.30
-2017-11-20T16:02:06.543Z - normal: Simulator: 	gl.supports_NPOT: true
-2017-11-20T16:02:06.543Z - normal: Simulator: 	cocos2d.x.version: 1.6.2
-2017-11-20T16:02:06.544Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
-2017-11-20T16:02:06.544Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
-2017-11-20T16:02:06.545Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
-2017-11-20T16:02:06.545Z - normal: Simulator: 	gl.max_texture_size: 16384
-2017-11-20T16:02:06.546Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
-2017-11-20T16:02:06.546Z - normal: Simulator: 	gl.vendor: NVIDIA Corporation
-2017-11-20T16:02:06.547Z - normal: Simulator: 	gl.renderer: GeForce GTX 980M/PCIe/SSE2
-2017-11-20T16:02:06.547Z - normal: Simulator: 	gl.max_texture_units: 192
-2017-11-20T16:02:06.547Z - normal: Simulator: 	gl.supports_ETC1: false
-2017-11-20T16:02:06.547Z - normal: Simulator: 	gl.supports_PVRTC: false
-2017-11-20T16:02:06.548Z - normal: Simulator: 	gl.supports_BGRA8888: false
-2017-11-20T16:02:06.548Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
-2017-11-20T16:02:06.548Z - normal: Simulator: 	gl.supports_vertex_array_object: true
-2017-11-20T16:02:06.548Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
-2017-11-20T16:02:06.548Z - normal: Simulator: 	gl.supports_OES_depth24: false
-2017-11-20T16:02:06.549Z - normal: Simulator: }
-2017-11-20T16:02:06.549Z - normal: Simulator: 
-2017-11-20T16:02:06.549Z - normal: Simulator: 
-2017-11-20T16:02:06.549Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
-2017-11-20T16:02:06.549Z - normal: Simulator: Project Config:
-2017-11-20T16:02:06.549Z - normal: Simulator:     project dir: D:\CocosCreator\resources\cocos2d-x\simulator\win32\
-2017-11-20T16:02:06.549Z - normal: Simulator:     writable path: $(PROJDIR)\
-2017-11-20T16:02:06.550Z - normal: Simulator:     script file: $(PROJDIR)\main.js
-2017-11-20T16:02:06.550Z - normal: Simulator:     frame size: 960 x 640
-2017-11-20T16:02:06.550Z - normal: Simulator:     frame scale: 1.00
-2017-11-20T16:02:06.550Z - normal: Simulator:     show console: NO
-2017-11-20T16:02:06.550Z - normal: Simulator:     write debug log: NO ()
-2017-11-20T16:02:06.550Z - normal: Simulator:     listen: 
-2017-11-20T16:02:06.550Z - normal: Simulator:     debugger: none
-2017-11-20T16:02:06.551Z - normal: Simulator:     add searching path:
-2017-11-20T16:02:06.551Z - normal: Simulator: 
-2017-11-20T16:02:06.551Z - normal: Simulator: 
-2017-11-20T16:02:06.551Z - normal: Simulator: 
-2017-11-20T16:02:06.552Z - normal: Simulator: ------------------------------------------------
-2017-11-20T16:02:06.553Z - normal: Simulator: LOAD Js FILE: main.js
-2017-11-20T16:02:06.553Z - normal: Simulator: ------------------------------------------------
-2017-11-20T16:02:06.662Z - normal: Simulator: Cocos2d-x-lite v1.6.0
-2017-11-20T16:02:07.063Z - normal: Simulator: iShow!
-2017-11-20T16:02:07.291Z - normal: Simulator: InitScene: 1.5760000000000218ms
-2017-11-20T16:02:07.292Z - normal: Simulator: AutoRelease: 0.3120000000000118ms
-2017-11-20T16:02:07.292Z - normal: Simulator: Destroy: 0.053999999999973625ms
-2017-11-20T16:02:07.292Z - normal: Simulator: AttachPersist: 0.006999999999948159ms
-2017-11-20T16:02:07.295Z - normal: Simulator: spawn new Enemy
-2017-11-20T16:02:07.307Z - normal: Simulator: Activate: 14.808999999999969ms
-2017-11-20T16:02:14.191Z - normal: Simulator: HttpClient singleton is nullptr
-2017-11-20T16:02:14.227Z - normal: Simulator: basic_object_finalize 0C6774C0 ...
-2017-11-20T16:02:14.227Z - normal: Simulator: jsbindings: finalizing JS object 0C6774E0 (WebSocket)
-2017-11-20T16:02:14.227Z - normal: Simulator: jsbindings: finalizing JS object 0C677500 (SocketIO)
-2017-11-20T16:02:23.998Z - normal: Simulator: SCREEN DPI = 96, SCREEN SCALE = 1.00
-2017-11-20T16:02:24.004Z - normal: Simulator: WORKAREA WIDTH 1520.00, HEIGHT 765.00
-2017-11-20T16:02:24.004Z - normal: Simulator: FRAME SCALE = 1.00
-2017-11-20T16:02:24.244Z - normal: Simulator: Ready for GLSL
-2017-11-20T16:02:24.244Z - normal: Simulator: Ready for OpenGL 2.0
-2017-11-20T16:02:24.245Z - normal: Simulator: 
-2017-11-20T16:02:24.245Z - normal: Simulator: {
-2017-11-20T16:02:24.245Z - normal: Simulator: 	gl.version: 4.5.0 NVIDIA 369.30
-2017-11-20T16:02:24.245Z - normal: Simulator: 	gl.supports_NPOT: true
-2017-11-20T16:02:24.246Z - normal: Simulator: 	cocos2d.x.version: 1.6.2
-2017-11-20T16:02:24.247Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
-2017-11-20T16:02:24.247Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
-2017-11-20T16:02:24.248Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
-2017-11-20T16:02:24.248Z - normal: Simulator: 	gl.max_texture_size: 16384
-2017-11-20T16:02:24.248Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
-2017-11-20T16:02:24.249Z - normal: Simulator: 	gl.vendor: NVIDIA Corporation
-2017-11-20T16:02:24.249Z - normal: Simulator: 	gl.renderer: GeForce GTX 980M/PCIe/SSE2
-2017-11-20T16:02:24.249Z - normal: Simulator: 	gl.max_texture_units: 192
-2017-11-20T16:02:24.249Z - normal: Simulator: 	gl.supports_ETC1: false
-2017-11-20T16:02:24.249Z - normal: Simulator: 	gl.supports_PVRTC: false
-2017-11-20T16:02:24.250Z - normal: Simulator: 	gl.supports_BGRA8888: false
-2017-11-20T16:02:24.251Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
-2017-11-20T16:02:24.252Z - normal: Simulator: 	gl.supports_vertex_array_object: true
-2017-11-20T16:02:24.254Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
-2017-11-20T16:02:24.255Z - normal: Simulator: 	gl.supports_OES_depth24: false
-2017-11-20T16:02:24.255Z - normal: Simulator: }
-2017-11-20T16:02:24.255Z - normal: Simulator: 
-2017-11-20T16:02:24.255Z - normal: Simulator: 
-2017-11-20T16:02:24.255Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
-2017-11-20T16:02:24.258Z - normal: Simulator: Project Config:
-2017-11-20T16:02:24.259Z - normal: Simulator:     project dir: D:\CocosCreator\resources\cocos2d-x\simulator\win32\
-2017-11-20T16:02:24.259Z - normal: Simulator:     writable path: $(PROJDIR)\
-2017-11-20T16:02:24.260Z - normal: Simulator:     script file: $(PROJDIR)\main.js
-2017-11-20T16:02:24.260Z - normal: Simulator:     frame size: 960 x 640
-2017-11-20T16:02:24.261Z - normal: Simulator:     frame scale: 1.00
-2017-11-20T16:02:24.261Z - normal: Simulator:     show console: NO
-2017-11-20T16:02:24.262Z - normal: Simulator:     write debug log: NO ()
-2017-11-20T16:02:24.262Z - normal: Simulator:     listen: 
-2017-11-20T16:02:24.263Z - normal: Simulator:     debugger: none
-2017-11-20T16:02:24.263Z - normal: Simulator:     add searching path:
-2017-11-20T16:02:24.263Z - normal: Simulator: 
-2017-11-20T16:02:24.263Z - normal: Simulator: 
-2017-11-20T16:02:24.263Z - normal: Simulator: 
-2017-11-20T16:02:24.263Z - normal: Simulator: ------------------------------------------------
-2017-11-20T16:02:24.264Z - normal: Simulator: LOAD Js FILE: main.js
-2017-11-20T16:02:24.264Z - normal: Simulator: ------------------------------------------------
-2017-11-20T16:02:24.380Z - normal: Simulator: Cocos2d-x-lite v1.6.0
-2017-11-20T16:02:24.796Z - normal: Simulator: iShow!
-2017-11-20T16:02:25.042Z - normal: Simulator: InitScene: 1.45900000000006ms
-2017-11-20T16:02:25.042Z - normal: Simulator: AutoRelease: 0.34699999999998ms
-2017-11-20T16:02:25.042Z - normal: Simulator: Destroy: 0.07100000000002638ms
-2017-11-20T16:02:25.043Z - normal: Simulator: AttachPersist: 0.013000000000033651ms
-2017-11-20T16:02:25.046Z - normal: Simulator: spawn new Enemy
-2017-11-20T16:02:25.059Z - normal: Simulator: Activate: 13.755999999999972ms
-2017-11-20T16:02:37.774Z - normal: Simulator: HttpClient singleton is nullptr
-2017-11-20T16:02:37.812Z - normal: Simulator: basic_object_finalize 0DF774C0 ...
-2017-11-20T16:02:37.812Z - normal: Simulator: jsbindings: finalizing JS object 0DF774E0 (WebSocket)
-2017-11-20T16:02:37.812Z - normal: Simulator: jsbindings: finalizing JS object 0DF77500 (SocketIO)
-2017-11-20T16:03:00.048Z - info: shutdown preview server
+2017-11-20T16:22:09.153Z - normal: Load ~/.CocosCreator/settings.json
+2017-11-20T16:22:09.156Z - normal: checking language setting...
+2017-11-20T16:22:09.157Z - normal: Language: zh
+2017-11-20T16:22:09.696Z - success: protocol editor-framework registered
+2017-11-20T16:22:09.698Z - success: protocol app registered
+2017-11-20T16:22:09.698Z - success: protocol theme registered
+2017-11-20T16:22:09.698Z - success: protocol profile registered
+2017-11-20T16:22:09.698Z - success: protocol packages registered
+2017-11-20T16:22:09.701Z - success: protocol unpack registerred
+2017-11-20T16:22:09.701Z - success: protocol disable-commonjs registerred
+2017-11-20T16:22:10.440Z - normal: connected!
+2017-11-20T16:22:10.443Z - normal: Check project /Users/rigel/radiusSTG
+2017-11-20T16:22:10.445Z - normal: Initializing Cocos2d
+2017-11-20T16:22:10.594Z - normal: Initializing Asset Database
+2017-11-20T16:22:10.622Z - success: protocol uuid registerred
+2017-11-20T16:22:10.622Z - success: protocol db registerred
+2017-11-20T16:22:10.622Z - success: protocol thumbnail registerred
+2017-11-20T16:22:10.623Z - normal: Loading editor/builtin packages
+2017-11-20T16:22:10.640Z - success: anysdk loaded
+2017-11-20T16:22:10.751Z - success: assets loaded
+2017-11-20T16:22:10.754Z - success: builder loaded
+2017-11-20T16:22:10.757Z - success: hierarchy loaded
+2017-11-20T16:22:10.760Z - success: inspector loaded
+2017-11-20T16:22:10.762Z - success: keystore loaded
+2017-11-20T16:22:10.765Z - success: node-library loaded
+2017-11-20T16:22:10.766Z - success: package-asset loaded
+2017-11-20T16:22:10.768Z - success: preferences loaded
+2017-11-20T16:22:10.770Z - success: project-exporter loaded
+2017-11-20T16:22:10.782Z - success: project-importer loaded
+2017-11-20T16:22:10.785Z - success: project-settings loaded
+2017-11-20T16:22:10.788Z - success: ui-kit loaded
+2017-11-20T16:22:10.795Z - success: ui-grid loaded
+2017-11-20T16:22:10.800Z - success: scene loaded
+2017-11-20T16:22:10.801Z - success: sprite-editor loaded
+2017-11-20T16:22:10.805Z - success: store loaded
+2017-11-20T16:22:10.810Z - success: timeline loaded
+2017-11-20T16:22:10.810Z - normal: Loading builtin packages
+2017-11-20T16:22:10.813Z - success: asset-db-debugger loaded
+2017-11-20T16:22:10.814Z - success: color-picker loaded
+2017-11-20T16:22:10.817Z - success: console loaded
+2017-11-20T16:22:10.821Z - success: package-manager loaded
+2017-11-20T16:22:10.824Z - success: sdkbox loaded
+2017-11-20T16:22:10.828Z - success: tester loaded
+2017-11-20T16:22:10.831Z - success: ui-kit-preview-extra loaded
+2017-11-20T16:22:10.834Z - success: ui-kit-preview loaded
+2017-11-20T16:22:10.837Z - success: ui-tree loaded
+2017-11-20T16:22:11.524Z - normal: Initializing project /Users/rigel/radiusSTG
+2017-11-20T16:22:11.526Z - normal: Loading packages
+2017-11-20T16:22:11.530Z - normal: Watching packages
+2017-11-20T16:22:11.541Z - normal: Run Application
+2017-11-20T16:22:12.800Z - success: preview server running at http://localhost:7456
+2017-11-20T16:22:17.575Z - normal: 1.6.2
