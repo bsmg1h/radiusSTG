@@ -1,4 +1,4 @@
-cc.Class({
+var bullet = cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -26,6 +26,11 @@ cc.Class({
         //this.speed = cc.random0To1() * 500 + 100;
         //随机给定子弹倾角
         //this.theta = cc.random0To1() * 2 * Math.PI;
+    },
+    
+    onCollisionEnter: function (other, self) {
+        cc.log("Bullet Hit");
+        this.node.destroy();
     },
 
     // called every frame, uncomment this function to activate update callback
