@@ -234,11 +234,6 @@
     "meta": 1511194864951,
     "relativePath": "audio/score.mp3"
   },
-  "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f": {
-    "asset": 1511194899310,
-    "meta": 1511194931915,
-    "relativePath": "bullet.prefab"
-  },
   "3cf1c7db-7c83-40dd-bd0b-80c300cf4049": {
     "asset": 1511194864951,
     "meta": 1511194931916,
@@ -254,11 +249,6 @@
     "meta": 1511194932310,
     "relativePath": "scripts/boss.js"
   },
-  "55529bde-6ab2-44c0-99d7-e222168652f8": {
-    "asset": 1511194899310,
-    "meta": 1511194932252,
-    "relativePath": "game.fire"
-  },
   "abdbf048-ff9c-450f-8389-060293fadd29": {
     "asset": 1511194864952,
     "meta": 1511194932326,
@@ -273,11 +263,6 @@
     "asset": 1511194864968,
     "meta": 1511194864954,
     "relativePath": "textures"
-  },
-  "d8cae77e-e5d4-477c-9fa6-ffa56cff9024": {
-    "asset": 1511194899310,
-    "meta": 1511194932452,
-    "relativePath": "scripts/player.js"
   },
   "7a6a5aa4-4fed-4b14-9ef5-afff1294f3b4": {
     "asset": 1511194864955,
@@ -324,9 +309,24 @@
     "meta": 1511194932648,
     "relativePath": "textures/star.png"
   },
+  "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f": {
+    "asset": 1511195393685,
+    "meta": 1511195398945,
+    "relativePath": "bullet.prefab"
+  },
+  "55529bde-6ab2-44c0-99d7-e222168652f8": {
+    "asset": 1511195393686,
+    "meta": 1511195399042,
+    "relativePath": "game.fire"
+  },
   "4f565172-7101-46af-a2e2-f58acb025c84": {
-    "asset": 1511195267331,
-    "meta": 1511195268399,
+    "asset": 1511195393686,
+    "meta": 1511195399152,
     "relativePath": "scripts/game.js"
+  },
+  "d8cae77e-e5d4-477c-9fa6-ffa56cff9024": {
+    "asset": 1511206483390,
+    "meta": 1511206485126,
+    "relativePath": "scripts/player.js"
   }
 }

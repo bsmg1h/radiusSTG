@@ -91,6 +91,32 @@
         "node-library",
         "timeline"
       ]
+    },
+    "window-1511206681647": {
+      "main": false,
+      "url": "unpack://static/window.html",
+      "windowType": "dockable",
+      "x": 590,
+      "y": 210,
+      "width": 500,
+      "height": 522,
+      "layout": {
+        "children": [
+          {
+            "active": 0,
+            "children": [
+              "sprite-editor"
+            ],
+            "height": 500,
+            "type": "panel",
+            "width": 500
+          }
+        ],
+        "type": "dock-v"
+      },
+      "panels": [
+        "sprite-editor"
+      ]
     }
   },
   "panels": {
@@ -99,6 +125,12 @@
       "y": 276,
       "width": 422,
       "height": 553
+    },
+    "sprite-editor": {
+      "x": 590,
+      "y": 210,
+      "width": 500,
+      "height": 522
     }
   }
 }

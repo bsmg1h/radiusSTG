@@ -2,22 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b710a55f-8c08-425b-8221-d1b38742918c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/game.js" afterPath="$PROJECT_DIR$/assets/scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/4f/4f565172-7101-46af-a2e2-f58acb025c84.js" afterPath="$PROJECT_DIR$/library/imports/4f/4f565172-7101-46af-a2e2-f58acb025c84.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/4f/4f565172-7101-46af-a2e2-f58acb025c84.js.map" afterPath="$PROJECT_DIR$/library/imports/4f/4f565172-7101-46af-a2e2-f58acb025c84.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/93/937365a2-af7d-4fbc-bf9d-df2e0753020d.js.map" afterPath="$PROJECT_DIR$/library/imports/93/937365a2-af7d-4fbc-bf9d-df2e0753020d.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/ab/abdbf048-ff9c-450f-8389-060293fadd29.js.map" afterPath="$PROJECT_DIR$/library/imports/ab/abdbf048-ff9c-450f-8389-060293fadd29.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_btn_disabled.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_btn_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_btn_normal.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_btn_normal.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_btn_pressed.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_btn_pressed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_panel.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_panel.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_progressbar.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_progressbar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_progressbar_bg.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_progressbar_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_radio_button_off.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_radio_button_off.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_radio_button_on.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_radio_button_on.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_scrollbar.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_scrollbar.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_scrollbar_bg.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_scrollbar_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_scrollbar_vertical.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_scrollbar_vertical.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_scrollbar_vertical_bg.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_scrollbar_vertical_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_sprite.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_sprite.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_sprite_splash.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_sprite_splash.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_toggle_checkmark.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_toggle_checkmark.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_toggle_disabled.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_toggle_disabled.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_toggle_normal.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_toggle_normal.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/internal/image/default_toggle_pressed.png" afterPath="$PROJECT_DIR$/temp/internal/image/default_toggle_pressed.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/player.js" afterPath="$PROJECT_DIR$/assets/scripts/player.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/d8/d8cae77e-e5d4-477c-9fa6-ffa56cff9024.js" afterPath="$PROJECT_DIR$/library/imports/d8/d8cae77e-e5d4-477c-9fa6-ffa56cff9024.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/d8/d8cae77e-e5d4-477c-9fa6-ffa56cff9024.js.map" afterPath="$PROJECT_DIR$/library/imports/d8/d8cae77e-e5d4-477c-9fa6-ffa56cff9024.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/f1/f115748f-8918-4486-a3d6-4e452aea3f5e.js.map" afterPath="$PROJECT_DIR$/library/imports/f1/f115748f-8918-4486-a3d6-4e452aea3f5e.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/uuid-to-mtime.json" afterPath="$PROJECT_DIR$/library/uuid-to-mtime.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/layout.windows.json" afterPath="$PROJECT_DIR$/local/layout.windows.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/logs/project.log" afterPath="$PROJECT_DIR$/local/logs/project.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/boss.js.map" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/boss.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/bullet.js.map" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/bullet.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/enemy.js.map" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/enemy.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/game.js" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/game.js.map" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/game.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/player.js" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/player.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/player.js.map" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/player.js.map" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,11 +51,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/scripts/game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="72" column="69" lean-forward="false" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="69" />
+            <state relative-caret-position="605">
+              <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/scripts/player.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="114" column="51" lean-forward="false" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.js.meta" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scripts/player.js.meta">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -61,6 +90,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/assets/scripts/game.js" />
+        <option value="$PROJECT_DIR$/assets/scripts/player.js" />
       </list>
     </option>
   </component>
@@ -141,12 +171,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511195104031</updated>
-      <workItem from="1511195106281" duration="191000" />
+      <workItem from="1511195106281" duration="3372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191000" />
+    <option name="totallyTimeSpent" value="3372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -189,10 +219,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/library/uuid-to-mtime.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local/assets.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/player.js.meta">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/scripts/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="72" column="69" lean-forward="false" selection-start-line="72" selection-start-column="69" selection-end-line="72" selection-end-column="69" />
+        <state relative-caret-position="605">
+          <caret line="71" column="19" lean-forward="false" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="114" column="51" lean-forward="false" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
           <folding />
         </state>
       </provider>

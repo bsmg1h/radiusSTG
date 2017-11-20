@@ -33,47 +33,62 @@ cc.Class({
             onKeyPressed: function onKeyPressed(keyCode, event) {
                 switch (keyCode) {
                     case cc.KEY.a:
+                    case cc.KEY.left:
                         self.accLeft = true;
                         self.accRight = false;
                         self.moveLeft = true;
                         self.moveRight = false;
                         break;
                     case cc.KEY.d:
+                    case cc.KEY.right:
                         self.accLeft = false;
                         self.accRight = true;
                         self.moveLeft = false;
                         self.moveRight = true;
                         break;
                     case cc.KEY.w:
+                    case cc.KEY.up:
                         self.accUp = true;
                         self.accDown = false;
                         self.moveUp = true;
                         self.moveDown = false;
                         break;
                     case cc.KEY.s:
+                    case cc.KEY.down:
                         self.accUp = false;
                         self.accDown = true;
                         self.moveUp = false;
                         self.moveDown = true;
+                        break;
+                    case cc.KEY.shift:
+                        self.slowMode = true;
+                        break;
                 }
             },
             onKeyReleased: function onKeyReleased(keyCode, event) {
                 switch (keyCode) {
                     case cc.KEY.a:
+                    case cc.KEY.left:
                         self.accLeft = false;
                         self.moveLeft = false;
                         break;
                     case cc.KEY.d:
+                    case cc.KEY.right:
                         self.accRight = false;
                         self.moveRight = false;
                         break;
                     case cc.KEY.w:
+                    case cc.KEY.up:
                         self.accUp = false;
                         self.moveUp = false;
                         break;
                     case cc.KEY.s:
+                    case cc.KEY.down:
                         self.accDown = false;
                         self.moveDown = false;
+                        break;
+                    case cc.KEY.shift:
+                        self.slowMode = false;
                         break;
                 }
             }
@@ -92,6 +107,8 @@ cc.Class({
         this.moveUp = false;
         this.moveDown = false;
 
+        this.slowMode = false;
+
         this.xSpeed = 0;
         this.ySpeed = 0;
 
@@ -101,17 +118,18 @@ cc.Class({
     // called every frame, uncomment this function to activate update callback
     update: function update(dt) {
         if (!this.spaceMoving) {
+            var speedFactor = this.slowMode ? 0.25 : 1;
             if (this.moveLeft) {
-                this.xSpeed = -1 * this.maxMoveSpeed;
+                this.xSpeed = -1 * speedFactor * this.maxMoveSpeed;
             } else if (this.moveRight) {
-                this.xSpeed = this.maxMoveSpeed;
+                this.xSpeed = speedFactor * this.maxMoveSpeed;
             } else {
                 this.xSpeed = 0;
             }
             if (this.moveUp) {
-                this.ySpeed = this.maxMoveSpeed;
+                this.ySpeed = speedFactor * this.maxMoveSpeed;
             } else if (this.moveDown) {
-                this.ySpeed = -1 * this.maxMoveSpeed;
+                this.ySpeed = -1 * speedFactor * this.maxMoveSpeed;
             } else {
                 this.ySpeed = 0;
             }
