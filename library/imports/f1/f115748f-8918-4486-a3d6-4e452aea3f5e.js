@@ -28,7 +28,7 @@ cc.Class({
     },
 
     onCollisionEnter: function onCollisionEnter(other, self) {
-        //cc.log("Enemy is hit by bullet: " + (other.tag == 1));
+        cc.log("Enemy is hit by bullet: " + (other.tag == 1));
         if (this.hit) return;
         this.hit = true;
         this.node.destroy();
