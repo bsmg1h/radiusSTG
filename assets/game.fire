@@ -66,10 +66,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 7
+        "__id__": 8
       },
       {
-        "__id__": 8
+        "__id__": 9
       }
     ],
     "_prefab": null,
@@ -200,6 +200,9 @@
     "_components": [
       {
         "__id__": 6
+      },
+      {
+        "__id__": 7
       }
     ],
     "_prefab": null,
@@ -266,6 +269,16 @@
     "_atlas": null
   },
   {
+    "__type__": "93736Wir31PvL+d3y4HUwIN",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 5
+    },
+    "_enabled": true,
+    "radius": 50
+  },
+  {
     "__type__": "cc.Canvas",
     "_name": "",
     "_objFlags": 0,
@@ -290,8 +303,11 @@
     },
     "_enabled": true,
     "bulletPrefab": {
-      "__uuid__": "25096896-5816-4353-a6ef-08410e5b9814"
+      "__uuid__": "37d8404d-703b-4fc8-a31d-a206a2614bf4"
     },
-    "bulletInterval": 0.02
+    "bulletInterval": 0.04,
+    "bulletSpeedCoefficient": 801,
+    "bulletSpeedIntercept": 30,
+    "w": 300
   }
 ]
