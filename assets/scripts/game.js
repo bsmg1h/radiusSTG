@@ -18,7 +18,7 @@ cc.Class({
             type: cc.Prefab
         },
         //两颗子弹的发射间隔
-        bulletInterval: 500
+        bulletInterval: 1000
     },
 
     // use this for initialization
@@ -26,8 +26,6 @@ cc.Class({
         //计时器
         this.deltaT = 0;
         this.T = 0;
-        //计数器
-        this.i = -1;
         //存储子弹数组
         this.newBullets = new Array();
     },
@@ -39,15 +37,20 @@ cc.Class({
         if (this.deltaT > this.bulletInterval){
             //如果计时器大于子弹发射时间间隔，则发射子弹
             //计数器加一
-            this.i += 1;
             //计时器归零
+            this.shootNewBullet(this.T, 5);
             this.deltaT -= this.bulletInterval;
         }
-    }
+    },
 
     shootNewBullet: function (T, w) {
-        this.newBullets[i] = cc.instantiate(this.bulletPrefab);
-        this.node.addChild(this.newBullets[i]);
-        
+        for(var i = 0; i < w; ++i)
+        {
+            this.newBullets[i] = cc.instantiate(this.bulletPrefab);
+            this.newBullets[i].getComponent("bullet").speed = 250;
+            this.newBullets[i].getComponent("bullet").theta = this.T * this.T * Math.PI / 8 + 2 * Math.PI * i / w;
+            this.newBullets[i].setPosition(cc.p(0,0));
+            this.node.addChild(this.newBullets[i]);
+        }
     }
 });

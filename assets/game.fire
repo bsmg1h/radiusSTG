@@ -279,7 +279,7 @@
       "height": 640
     },
     "_fitWidth": false,
-    "_fitHeight": true
+    "_fitHeight": false
   },
   {
     "__type__": "4f565FycQFGr6Li9YrLAlyE",
@@ -292,6 +292,6 @@
     "bulletPrefab": {
       "__uuid__": "25096896-5816-4353-a6ef-08410e5b9814"
     },
-    "bulletInterval": 0.02
+    "bulletInterval": 0.1
   }
 ]
