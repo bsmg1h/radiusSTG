@@ -1,4 +1,6 @@
 .DS_Store
-/library
-/local
-/temp
+._*
+.idea
+library
+local
+temp
