@@ -1,4 +1,4 @@
-cc.Class({
+var bullet = cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -13,17 +13,24 @@ cc.Class({
         // },
         // ...
         // 子弹的速度
-        speed: 0,
+        //speed: 0,
         // 子弹速度向量倾角
-        theta: 0
+        //theta: 0
     },
 
     // use this for initialization
     onLoad: function () {
+        //this.speed = 0;
+        //this.theta = 0;
         //随机给定子弹速度
-        this.speed = cc.random0To1() * 500 + 100;
+        //this.speed = cc.random0To1() * 500 + 100;
         //随机给定子弹倾角
-        this.theta = cc.random0To1() * 2 * Math.PI;
+        //this.theta = cc.random0To1() * 2 * Math.PI;
+    },
+    
+    onCollisionEnter: function (other, self) {
+        cc.log("Bullet Hit");
+        this.node.destroy();
     },
 
     // called every frame, uncomment this function to activate update callback
