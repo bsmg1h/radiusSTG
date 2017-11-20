@@ -21,6 +21,10 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
+        backgroundPrefab: {
+            default: null,
+            type: cc.Prefab
+        },
         //两颗子弹的发射间隔
         bulletInterval: 500,
         //子弹速度斜率
@@ -41,6 +45,18 @@ cc.Class({
         // pass Game instance to star
         newEnemy.getComponent('enemy').init(this);
     },
+    setBackground: function() {
+        this.background1 = cc.instantiate(this.backgroundPrefab);
+        this.background2 = cc.instantiate(this.backgroundPrefab);
+        this.background1.width = this.node.width;
+        this.background1.height = this.node.height;
+        this.background2.width = this.node.width;
+        this.background2.height = this.node.height;
+        this.node.addChild(this.background1);
+        this.background1.setPosition(cc.p(0,0));
+        this.node.addChild(this.background2);
+        this.background2.setPosition(cc.p(0, this.node.height));
+    },
     test: function() {
         this.node.width = 3;
     },
@@ -54,6 +70,8 @@ cc.Class({
         this.i = -1;
         //存储子弹数组
         this.newBullets = [];
+        //Background Setting
+        this.setBackground();
         //Generate Enemies
         this.spawnEnemy();
         // Collision System
