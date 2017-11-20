@@ -292,6 +292,9 @@
     "bulletPrefab": {
       "__uuid__": "25096896-5816-4353-a6ef-08410e5b9814"
     },
+    "enemyPrefab": {
+      "__uuid__": "3cf1c7db-7c83-40dd-bd0b-80c300cf4049"
+    },
     "bulletInterval": 0.02
   }
 ]
