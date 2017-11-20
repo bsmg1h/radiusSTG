@@ -20,7 +20,7 @@
                 ],
                 "height": 438,
                 "type": "panel",
-                "width": 432.453125
+                "width": 432
               },
               {
                 "active": 0,
@@ -29,12 +29,12 @@
                 ],
                 "height": 411,
                 "type": "panel",
-                "width": 432.453125
+                "width": 432
               }
             ],
             "height": 852,
             "type": "dock-v",
-            "width": 432.453125
+            "width": 432
           },
           {
             "children": [
@@ -47,7 +47,7 @@
                     ],
                     "height": 490.984375,
                     "type": "panel",
-                    "width": 894.65625
+                    "width": 894.984375
                   },
                   {
                     "active": 0,
@@ -56,66 +56,40 @@
                     ],
                     "height": 490.984375,
                     "type": "panel",
-                    "width": 340.859375
+                    "width": 341
                   }
                 ],
                 "height": 490.984375,
                 "type": "dock-h",
-                "width": 1238.53125
+                "width": 1239
               },
               {
-                "active": 2,
+                "active": 1,
                 "children": [
                   "console",
-                  "timeline",
-                  "inspector"
+                  "inspector",
+                  "timeline"
                 ],
                 "height": 358,
                 "type": "panel",
-                "width": 1238.53125
+                "width": 1239
               }
             ],
             "height": 852,
             "type": "dock-v",
-            "width": 1238.53125
+            "width": 1239
           }
         ],
         "type": "dock-h"
       },
       "panels": [
-        "inspector",
         "console",
+        "inspector",
         "hierarchy",
         "assets",
         "scene",
         "node-library",
         "timeline"
-      ]
-    },
-    "window-1511206681647": {
-      "main": false,
-      "url": "unpack://static/window.html",
-      "windowType": "dockable",
-      "x": 590,
-      "y": 210,
-      "width": 500,
-      "height": 522,
-      "layout": {
-        "children": [
-          {
-            "active": 0,
-            "children": [
-              "sprite-editor"
-            ],
-            "height": 500,
-            "type": "panel",
-            "width": 500
-          }
-        ],
-        "type": "dock-v"
-      },
-      "panels": [
-        "sprite-editor"
       ]
     }
   },

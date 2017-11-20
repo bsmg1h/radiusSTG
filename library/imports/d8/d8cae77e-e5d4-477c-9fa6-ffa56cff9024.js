@@ -115,6 +115,12 @@ cc.Class({
         this.setInputControl();
     },
 
+    onCollisionEnter: function onCollisionEnter(other, self) {
+        cc.log("Player is hit by bullet: " + (other.tag == 1));
+        this.node.setPositionX(0);
+        this.node.setPositionY(-200);
+    },
+
     // called every frame, uncomment this function to activate update callback
     update: function update(dt) {
         if (!this.spaceMoving) {

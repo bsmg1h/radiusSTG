@@ -240,7 +240,7 @@
     "relativePath": "enemy.prefab"
   },
   "4e4707de-b223-4966-86c3-e6b7805a0ea4": {
-    "asset": 1511194899311,
+    "asset": 1511209592520,
     "meta": 1511194864952,
     "relativePath": "scripts"
   },
@@ -248,16 +248,6 @@
     "asset": 1511194864952,
     "meta": 1511194932310,
     "relativePath": "scripts/boss.js"
-  },
-  "abdbf048-ff9c-450f-8389-060293fadd29": {
-    "asset": 1511194864952,
-    "meta": 1511194932326,
-    "relativePath": "scripts/bullet.js"
-  },
-  "f115748f-8918-4486-a3d6-4e452aea3f5e": {
-    "asset": 1511194864953,
-    "meta": 1511194932393,
-    "relativePath": "scripts/enemy.js"
   },
   "d9c59071-3b61-4543-91fe-9253c30c8ece": {
     "asset": 1511194864968,
@@ -310,13 +300,13 @@
     "relativePath": "textures/star.png"
   },
   "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f": {
-    "asset": 1511207395474,
-    "meta": 1511207395497,
+    "asset": 1511210297986,
+    "meta": 1511210297998,
     "relativePath": "bullet.prefab"
   },
   "55529bde-6ab2-44c0-99d7-e222168652f8": {
-    "asset": 1511207453477,
-    "meta": 1511207453488,
+    "asset": 1511210402587,
+    "meta": 1511210402604,
     "relativePath": "game.fire"
   },
   "4f565172-7101-46af-a2e2-f58acb025c84": {
@@ -324,9 +314,19 @@
     "meta": 1511195399152,
     "relativePath": "scripts/game.js"
   },
+  "abdbf048-ff9c-450f-8389-060293fadd29": {
+    "asset": 1511209936242,
+    "meta": 1511209937161,
+    "relativePath": "scripts/bullet.js"
+  },
+  "f115748f-8918-4486-a3d6-4e452aea3f5e": {
+    "asset": 1511209936244,
+    "meta": 1511209937162,
+    "relativePath": "scripts/enemy.js"
+  },
   "d8cae77e-e5d4-477c-9fa6-ffa56cff9024": {
-    "asset": 1511206483390,
-    "meta": 1511206485126,
+    "asset": 1511210223709,
+    "meta": 1511210225524,
     "relativePath": "scripts/player.js"
   }
 }
