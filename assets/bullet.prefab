@@ -57,7 +57,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -4,
-      "y": 72
+      "y": -9
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -99,9 +99,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
-    "speed": 500,
-    "theta": 5
+    "_enabled": true
   },
   {
     "__type__": "cc.CircleCollider",
@@ -127,7 +125,7 @@
     "asset": {
       "__uuid__": "25096896-5816-4353-a6ef-08410e5b9814"
     },
-    "fileId": "efu1n/0JtALZB/QzSwnTFv",
+    "fileId": "61MT+Z1odM9ITfEYeTcLYe",
     "sync": false
   }
 ]
