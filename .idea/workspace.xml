@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b710a55f-8c08-425b-8221-d1b38742918c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/d8/d8cae77e-e5d4-477c-9fa6-ffa56cff9024.js.map" afterPath="$PROJECT_DIR$/library/imports/d8/d8cae77e-e5d4-477c-9fa6-ffa56cff9024.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/player.js.map" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/player.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/bullet.prefab" afterPath="$PROJECT_DIR$/assets/bullet.prefab" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/game.fire" afterPath="$PROJECT_DIR$/assets/game.fire" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/bullet.js" afterPath="$PROJECT_DIR$/assets/scripts/bullet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/enemy.js" afterPath="$PROJECT_DIR$/assets/scripts/enemy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/scripts/player.js" afterPath="$PROJECT_DIR$/assets/scripts/player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/55/55529bde-6ab2-44c0-99d7-e222168652f8.json" afterPath="$PROJECT_DIR$/library/imports/55/55529bde-6ab2-44c0-99d7-e222168652f8.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/ab/abdbf048-ff9c-450f-8389-060293fadd29.js" afterPath="$PROJECT_DIR$/library/imports/ab/abdbf048-ff9c-450f-8389-060293fadd29.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/ab/abdbf048-ff9c-450f-8389-060293fadd29.js.map" afterPath="$PROJECT_DIR$/library/imports/ab/abdbf048-ff9c-450f-8389-060293fadd29.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/d8/d8cae77e-e5d4-477c-9fa6-ffa56cff9024.js" afterPath="$PROJECT_DIR$/library/imports/d8/d8cae77e-e5d4-477c-9fa6-ffa56cff9024.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/e9/e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f.json" afterPath="$PROJECT_DIR$/library/imports/e9/e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/f1/f115748f-8918-4486-a3d6-4e452aea3f5e.js" afterPath="$PROJECT_DIR$/library/imports/f1/f115748f-8918-4486-a3d6-4e452aea3f5e.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/imports/f1/f115748f-8918-4486-a3d6-4e452aea3f5e.js.map" afterPath="$PROJECT_DIR$/library/imports/f1/f115748f-8918-4486-a3d6-4e452aea3f5e.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/uuid-to-mtime.json" afterPath="$PROJECT_DIR$/library/uuid-to-mtime.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/assets.json" afterPath="$PROJECT_DIR$/local/assets.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/layout.windows.json" afterPath="$PROJECT_DIR$/local/layout.windows.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local/logs/project.log" afterPath="$PROJECT_DIR$/local/logs/project.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/BackupAssets/assets/bullet.prefab" afterPath="$PROJECT_DIR$/temp/BackupAssets/assets/bullet.prefab" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/BackupAssets/assets/game.fire" afterPath="$PROJECT_DIR$/temp/BackupAssets/assets/game.fire" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/bullet.js" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/bullet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/bullet.js.map" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/bullet.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/enemy.js" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/enemy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/enemy.js.map" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/enemy.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/player.js" afterPath="$PROJECT_DIR$/temp/quick-scripts/assets/scripts/player.js" />
-    </list>
+    <list default="true" id="b710a55f-8c08-425b-8221-d1b38742918c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -188,12 +161,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1511195104031</updated>
-      <workItem from="1511195106281" duration="5139000" />
+      <workItem from="1511195106281" duration="5340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5139000" />
+    <option name="totallyTimeSpent" value="5340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
