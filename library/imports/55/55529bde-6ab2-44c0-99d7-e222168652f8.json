@@ -70,10 +70,10 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 11
+        "__id__": 12
       },
       {
-        "__id__": 12
+        "__id__": 13
       }
     ],
     "_prefab": null,
@@ -155,8 +155,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 20,
-      "y": 26
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -298,6 +298,9 @@
       },
       {
         "__id__": 10
+      },
+      {
+        "__id__": 11
       }
     ],
     "_prefab": null,
@@ -323,19 +326,19 @@
     },
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 0.5,
+    "_scaleY": 0.5,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -247,
-      "y": -14
+      "x": 0,
+      "y": -200
     },
     "_skewX": 0,
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
     "_opacityModifyRGB": false,
-    "groupIndex": 0
+    "groupIndex": 1
   },
   {
     "__type__": "cc.Sprite",
@@ -374,7 +377,23 @@
     "spaceMoving": false,
     "Damping": 0.01,
     "accel": 400,
-    "maxMoveSpeed": 800
+    "maxMoveSpeed": 500
+  },
+  {
+    "__type__": "cc.CircleCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 8
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_radius": 10
   },
   {
     "__type__": "cc.Canvas",
@@ -406,7 +425,7 @@
     "enemyPrefab": {
       "__uuid__": "3cf1c7db-7c83-40dd-bd0b-80c300cf4049"
     },
-    "bulletInterval": 1000000,
+    "bulletInterval": 0.05,
     "bulletSpeedCoefficient": 801,
     "bulletSpeedIntercept": 30,
     "w": 300

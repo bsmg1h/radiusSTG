@@ -25,17 +25,10 @@ var bullet = cc.Class({
     },
 
     // use this for initialization
-    onLoad: function onLoad() {
-        //this.speed = 0;
-        //this.theta = 0;
-        //随机给定子弹速度
-        //this.speed = cc.random0To1() * 500 + 100;
-        //随机给定子弹倾角
-        //this.theta = cc.random0To1() * 2 * Math.PI;
-    },
+    onLoad: function onLoad() {},
 
     onCollisionEnter: function onCollisionEnter(other, self) {
-        cc.log("Bullet Hit");
+        cc.log("Bullet hit");
         this.node.destroy();
     },
 

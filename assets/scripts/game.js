@@ -30,6 +30,7 @@ cc.Class({
         //子弹发射角速度
         w : 0.1
     },
+
     //test
     spawnEnemy: function () {
         cc.log("spawn new Enemy");
@@ -44,6 +45,7 @@ cc.Class({
     test: function() {
         this.node.width = 3;
     },
+
     // use this for initialization
     onLoad: function () {
         //总计时器
@@ -63,47 +65,24 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-        this.T += dt;
         this.deltaT += dt;
+        this.T += dt;
         if (this.deltaT > this.bulletInterval){
             //如果计时器大于子弹发射时间间隔，则发射子弹
-            //计数器加一
-            this.i += 1;
-            //计时器重置
+            //计时器归零
+            this.shootNewBullet(this.T - this.T % this.bulletInterval, 5);
             this.deltaT -= this.bulletInterval;
-            //发射新子弹
-            this.shootNewBullet(this.bulletSpeedCoefficient, this.bulletSpeedIntercept, (this.T - this.T%this.bulletInterval), this.w);
         }
     },
-    onDisable: function () {
-        cc.director.getCollisionManager().enabled = false;
-        cc.director.getCollisionManager().enabledDebugDraw = false;
-    },
-    //生成新子弹的函数
-    shootNewBullet: function(speedCoefficient, speedIntercept, T, w) {
-        //子弹数组存储新子弹
-        this.newBullets[i] = cc.instantiate(this.bulletPrefab);
-        //将这颗新子弹作为Canvas的子节点
-        this.node.addChild(this.newBullets[i]);
-        //设置这颗子弹的初始速度
-        //var speedAndTheta = this.bulletRandomIsotropyInitializer(speedCoefficient, speedIntercept);
-        var speedAndTheta = this.bulletSpiralInitializer(speedIntercept, T, w);
-        this.newBullets[i].getComponent("bullet").speed = speedAndTheta[0];
-        //设置这颗子弹的初始行进方向
-        this.newBullets[i].getComponent("bullet").theta = speedAndTheta[1];
-        //设置这颗子弹的初始位置
-        this.newBullets[i].setPosition(cc.p(50 * Math.cos(speedAndTheta[1]), 50 * Math.sin(speedAndTheta[1])));
-    },
 
-    //返回子弹的初始速度与方向:
-    //随机各向同性子弹
-    bulletRandomIsotropyInitializer: function(speedCoefficient, speedIntercept ){
-        var speed = cc.random0To1() * speedCoefficient + speedIntercept;
-        var theta = cc.random0To1() * 2 * Math.PI;
-        return [speed, theta];
-    },
-    //螺旋子弹
-    bulletSpiralInitializer: function(speedIntercept, T, w) {
-        return[speedIntercept, T * w / Math.PI / 2]
+    shootNewBullet: function (T, w) {
+        for(var i = 0; i < w; ++i)
+        {
+            this.newBullets[i] = cc.instantiate(this.bulletPrefab);
+            this.newBullets[i].getComponent("bullet").speed = 250;
+            this.newBullets[i].getComponent("bullet").theta = this.T * this.T * Math.PI / 8 + 2 * Math.PI * i / w;
+            this.newBullets[i].setPosition(cc.p(0,0));
+            this.node.addChild(this.newBullets[i]);
+        }
     }
 });

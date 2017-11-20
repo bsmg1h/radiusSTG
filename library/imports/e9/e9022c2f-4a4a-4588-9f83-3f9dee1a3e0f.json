@@ -53,12 +53,12 @@
     },
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 0.5,
+    "_scaleY": 0.5,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -4,
-      "y": -9
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -116,7 +116,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 25
+    "_radius": 10
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -124,7 +124,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
     },
     "fileId": "fanrey0ipCTYBiJDfB/j2r",
     "sync": false
