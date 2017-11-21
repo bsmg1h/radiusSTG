@@ -26,7 +26,7 @@ cc.Class({
         this.node.y -= dt * this.speedY;
         this.offsetY += dt * this.speedY;
         if(this.offsetY >= this.resetY) {
-            this.node.y -= this.offsetY;
+            this.node.y += this.offsetY;
             this.offsetY = 0;
         }
     },
