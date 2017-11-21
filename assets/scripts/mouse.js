@@ -1,4 +1,4 @@
-var bullet = cc.Class({
+cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -12,34 +12,35 @@ var bullet = cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        // 子弹的速度
-        //speed: 0,
-        // 子弹速度向量倾角
-        //theta: 0
+
+
     },
 
     // use this for initialization
     onLoad: function () {
-    },
-    
-    onCollisionEnter: function (other, self) {
-        if (self.tag != 2) {
-            cc.log("Bullet hit");
-            this.node.destroy();
-        }
+        this.moseMoving = false;
+        this.mouseClickAction = false;
+        this.mouseClickStatus = false;
+        this.mouseReleaseAction = false;
+        this.mouseReleaseStatus = false;
+        //this.mousePressed = false;
+        //this.mousePressed = false;
+
+        /*this.node.parent.on('mousedown', function ( event ) {
+            //cc.log('Hello!');
+            this.mousePressed = true;
+            //cc.log(this.mousePressed);
+        });
+
+        this.node.parent.on('mouseup', function ( event ) {
+            //cc.log('Hi!');
+            this.mousePressed = false;
+            //cc.log(this.mousePressed);
+        });*/
     },
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-        // 子弹的位置按照行动路径更新
-        this.node.x += this.speed * Math.cos(this.theta) * dt;
-        this.node.y += this.speed * Math.sin(this.theta) * dt;
-        // 若子弹超过边界则被摧毁
-        if (Math.abs(this.node.x) > 480){
-            this.node.destroy();
-        }
-        if (Math.abs(this.node.y) > 320){
-            this.node.destroy();
-        }
-    }
+
+    },
 });
