@@ -37,6 +37,6 @@ cc.Class({
         //this.spawnEnemy();
         // Collision System
         cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = false;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
     }
 });

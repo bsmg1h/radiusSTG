@@ -19,8 +19,10 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-        cc.log("Bullet hit");
-        this.node.destroy();
+        if (self.tag != 2) {
+            cc.log("Bullet hit");
+            this.node.destroy();
+        }
     },
 
     // called every frame, uncomment this function to activate update callback

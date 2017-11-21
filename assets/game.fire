@@ -557,13 +557,13 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 80,
-      "height": 80
+      "width": 40,
+      "height": 40
     },
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 0.5,
-    "_scaleY": 0.5,
+    "_scaleX": 1,
+    "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -610,10 +610,13 @@
       "__id__": 17
     },
     "_enabled": true,
-    "spaceMoving": false,
+    "spaceMoving": true,
     "Damping": 0.01,
     "accel": 400,
-    "maxMoveSpeed": 500
+    "maxMoveSpeed": 500,
+    "playerBulletPrefab": {
+      "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
+    }
   },
   {
     "__type__": "cc.CircleCollider",
