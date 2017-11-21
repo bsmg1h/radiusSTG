@@ -507,7 +507,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 5
+    "_radius": 7
   },
   {
     "__type__": "cc.Canvas",

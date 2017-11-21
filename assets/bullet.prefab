@@ -99,7 +99,10 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true
+    "_enabled": true,
+    "speed": 0,
+    "theta": 0,
+    "origin": 1
   },
   {
     "__type__": "cc.CircleCollider",
@@ -115,7 +118,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 10
+    "_radius": 1
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -123,7 +126,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
     },
     "fileId": "72r2KIfrlBpbyk20xkqMRw",
     "sync": false
