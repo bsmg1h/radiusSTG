@@ -58,7 +58,7 @@ cc.Class({
         //存储子弹数组
         this.newBullets = [];
         //Generate Enemies
-        this.spawnEnemy();
+        //this.spawnEnemy();
         // Collision System
         cc.director.getCollisionManager().enabled = true;
         cc.director.getCollisionManager().enabledDebugDraw = true;
@@ -72,7 +72,7 @@ cc.Class({
             //如果计时器大于子弹发射时间间隔，则发射子弹
             //计时器归零
             this.counter += 1;
-            this.shootNewBullet(this.bulletInterval * this.counter, 5, this.T % this.bulletInterval);
+            this.shootNewBullet(this.counter * this.bulletInterval, 5, this.T - this.counter * this.bulletInterval);
             //this.deltaT -= this.bulletInterval;
         }
     },
@@ -81,7 +81,7 @@ cc.Class({
         for(var i = 0; i < w; ++i)
         {
             this.newBullets[i] = cc.instantiate(this.bulletPrefab);
-            var theta = this.T * this.T * Math.PI / 8 + 2 * Math.PI * i / w;
+            var theta = T * T * Math.PI / 8 + 2 * Math.PI * i / w;
             var speed = 250;
             this.newBullets[i].getComponent("bullet").speed = speed;
             this.newBullets[i].getComponent("bullet").theta = theta;

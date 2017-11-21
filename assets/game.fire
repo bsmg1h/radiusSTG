@@ -531,7 +531,7 @@
     "enemyPrefab": {
       "__uuid__": "3cf1c7db-7c83-40dd-bd0b-80c300cf4049"
     },
-    "bulletInterval": 0.05,
+    "bulletInterval": 0.1,
     "bulletSpeedCoefficient": 800,
     "bulletSpeedIntercept": 30,
     "w": 300
