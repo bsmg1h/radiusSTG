@@ -13,9 +13,11 @@ cc.Class({
         // },
         // ...
     },
+
     init: function(game) {
         this.game = game;
     },
+
     // use this for initialization
     onLoad: function () {
         this.hit = false;
