@@ -158,7 +158,7 @@ cc.Class({
         cc.log("Player is hit by bullet: " + (other.tag == 1));
         if (other.tag != 2) {
             this.node.setPositionX(0);
-            this.node.setPositionY(-200);
+            this.node.setPositionY(-210);
         }
     },
 
