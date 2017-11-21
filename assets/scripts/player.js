@@ -19,7 +19,8 @@ cc.Class({
         playerBulletPrefab:{
             default: null,
             type: cc.Prefab
-        }
+        },
+        bulletInterval: 0.1
     },
 
     setInputControl: function(){
@@ -145,6 +146,8 @@ cc.Class({
         this.setMouseControl();
 
         this.playerNewBullets = [];
+        this.T = 0;
+        this.counter = 0;
     },
 
     onCollisionEnter: function (other, self) {
@@ -239,23 +242,24 @@ cc.Class({
         //cc.log(this.mousePressed);
 
         if (this.mousePressed || this.shooting){
-            //console.log(this.mousePosX, this.mousePosY, this.node.y - this.mousePosY, this.node.x - this.mousePosX);
-
-            this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
-            var playerX = this.node.x + this.node.parent.width/2;
-            var playerY = this.node.y + this.node.parent.height/2;
-            if (this.shooting) theta = Math.PI / 2;
-            else
-            {
-                var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
-                if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
+            this.T += dt;
+            if (this.T > this.bulletInterval * this.counter) {
+                this.counter += 1;
+                this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
+                var playerX = this.node.x + this.node.parent.width / 2;
+                var playerY = this.node.y + this.node.parent.height / 2;
+                if (this.shooting) theta = Math.PI / 2;
+                else {
+                    var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
+                    if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
+                }
+                var speed = 500;
+                this.playerNewBullets[i].getComponent('bullet').speed = speed;
+                this.playerNewBullets[i].getComponent('bullet').theta = theta;
+                this.playerNewBullets[i].getComponent(cc.CircleCollider).tag = 2;
+                this.playerNewBullets[i].setPosition(this.node.x, this.node.y);
+                this.node.parent.addChild(this.playerNewBullets[i]);
             }
-            var speed = 500;
-            this.playerNewBullets[i].getComponent('bullet').speed = speed;
-            this.playerNewBullets[i].getComponent('bullet').theta = theta;
-            this.playerNewBullets[i].getComponent(cc.CircleCollider).tag = 2;
-            this.playerNewBullets[i].setPosition(this.node.x, this.node.y);
-            this.node.parent.addChild(this.playerNewBullets[i]);
         }
     }
 });
