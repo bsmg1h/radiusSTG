@@ -15,7 +15,15 @@ cc.Class({
         spaceMoving: false,
         Damping: 0.01,
         accel: 0,
+<<<<<<< HEAD
         maxMoveSpeed: 0
+=======
+        maxMoveSpeed: 0,
+        playerBulletPrefab:{
+            default: null,
+            type: cc.Prefab
+        }
+>>>>>>> 6218e7319b3d10c1f9f5b58cdeca01290f94bffa
     },
 
     setInputControl: function(){
@@ -89,6 +97,27 @@ cc.Class({
         }, self.node);
     },
 
+    setMouseControl: function(){
+        var self = this;
+        //添加鼠标事件侦听
+        cc.eventManager.addListener({
+            event: cc.EventListener.MOUSE,
+            //鼠标按下时，判断是否有我们制定的方向控制键，并设置相对应方向加速
+            onMouseDown: function (event) {
+                self.mousePressed = true;
+                self.mousePosX = event.getLocationX();
+                self.mousePosY = event.getLocationY();
+            },
+            onMouseMove: function(event){
+                self.mousePosX = event.getLocationX();
+                self.mousePosY = event.getLocationY();
+            },
+            onMouseUp: function (event) {
+                self.mousePressed = false;
+            }
+        }, self.node);
+    },
+
     // use this for initialization
     onLoad: function () {
         this.accLeft = false;
@@ -106,17 +135,46 @@ cc.Class({
         this.xSpeed = 0;
         this.ySpeed = 0;
 
+        this.mousePosX = 0;
+        this.mousePosY = 0;
+        this.mousePressed = false;
+
         this.setInputControl();
+        this.setMouseControl();
+
+        this.playerNewBullets = [];
+
+        /*this.node.on('mousedown', function ( event ) {
+            cc.log('Hello!');
+            this.mousePressed = true;
+            cc.log(this.mousePressed);
+        });
+
+        this.node.on('mouseup', function ( event ) {
+            cc.log('Hi!');
+            this.mousePressed = false;
+            cc.log(this.mousePressed);
+        });*/
+
     },
 
     onCollisionEnter: function (other, self) {
+<<<<<<< HEAD
         cc.log("Player is hit by bullet: " + (other.node.getComponent('bullet').origin == 1));
         this.node.setPositionX(0);
         this.node.setPositionY(-210);
+=======
+        cc.log("Player is hit by bullet: " + (other.tag == 1));
+        if (other.tag != 2) {
+            this.node.setPositionX(0);
+            this.node.setPositionY(-210);
+        }
+>>>>>>> 6218e7319b3d10c1f9f5b58cdeca01290f94bffa
     },
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
+
         if (!this.spaceMoving){
             var speedFactor = (this.slowMode ? 0.4 : 1);
             if (this.moveLeft) {
@@ -193,6 +251,26 @@ cc.Class({
                 this.node.y = -this.node.parent.height/2 + this.node.height/2;
                 this.ySpeed *= -1;
             }
+        }
+
+        //cc.log(this.mousePressed);
+
+        if (this.mousePressed){
+            console.log(this.mousePosX, this.mousePosY, this.node.y - this.mousePosY, this.node.x - this.mousePosX);
+
+            this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
+            var playerX = this.node.x + this.node.parent.width/2;
+            var playerY = this.node.y + this.node.parent.height/2;
+            var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
+            if (this.mousePosX - playerX < 0) {
+                theta = Math.PI - theta;
+            }
+            var speed = 250;
+            this.playerNewBullets[i].getComponent("bullet").speed = speed;
+            this.playerNewBullets[i].getComponent("bullet").theta = theta;
+            this.playerNewBullets[i]._components[2].tag = 2;
+            this.playerNewBullets[i].setPosition(this.node.x, this.node.y);
+            this.node.parent.addChild(this.playerNewBullets[i]);
         }
     }
 });
