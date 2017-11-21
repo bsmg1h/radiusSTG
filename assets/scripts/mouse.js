@@ -12,22 +12,35 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        speedY: 0
+
+
     },
 
     // use this for initialization
     onLoad: function () {
-        this.resetY = this.node.parent.height;
-        this.offsetY = 0;
+        this.moseMoving = false;
+        this.mouseClickAction = false;
+        this.mouseClickStatus = false;
+        this.mouseReleaseAction = false;
+        this.mouseReleaseStatus = false;
+        //this.mousePressed = false;
+        //this.mousePressed = false;
+
+        /*this.node.parent.on('mousedown', function ( event ) {
+            //cc.log('Hello!');
+            this.mousePressed = true;
+            //cc.log(this.mousePressed);
+        });
+
+        this.node.parent.on('mouseup', function ( event ) {
+            //cc.log('Hi!');
+            this.mousePressed = false;
+            //cc.log(this.mousePressed);
+        });*/
     },
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
-        this.node.y -= dt * this.speedY;
-        this.offsetY += dt * this.speedY;
-        if(this.offsetY >= this.resetY) {
-            this.node.y += this.offsetY;
-            this.offsetY = 0;
-        }
+
     },
 });
