@@ -55,7 +55,7 @@ cc.Class({
             this.newBullets[i].getComponent("bullet").speed = speed;
             this.newBullets[i].getComponent("bullet").theta = theta;
             this.newBullets[i].setPosition(cc.p(lagDis * Math.cos(theta), lagDis * Math.sin(theta)));
-            this.node.addChild(this.newBullets[i]);
+            this.node.parent.addChild(this.newBullets[i]);
         }
     }
 });

@@ -15,15 +15,11 @@ cc.Class({
         spaceMoving: false,
         Damping: 0.01,
         accel: 0,
-<<<<<<< HEAD
-        maxMoveSpeed: 0
-=======
         maxMoveSpeed: 0,
         playerBulletPrefab:{
             default: null,
             type: cc.Prefab
         }
->>>>>>> 6218e7319b3d10c1f9f5b58cdeca01290f94bffa
     },
 
     setInputControl: function(){
@@ -119,7 +115,7 @@ cc.Class({
     },
 
     // use this for initialization
-    onLoad: function () {
+    onLoad: function() {
         this.accLeft = false;
         this.accRight = false;
         this.accUp = false;
@@ -143,33 +139,14 @@ cc.Class({
         this.setMouseControl();
 
         this.playerNewBullets = [];
-
-        /*this.node.on('mousedown', function ( event ) {
-            cc.log('Hello!');
-            this.mousePressed = true;
-            cc.log(this.mousePressed);
-        });
-
-        this.node.on('mouseup', function ( event ) {
-            cc.log('Hi!');
-            this.mousePressed = false;
-            cc.log(this.mousePressed);
-        });*/
-
     },
 
     onCollisionEnter: function (other, self) {
-<<<<<<< HEAD
-        cc.log("Player is hit by bullet: " + (other.node.getComponent('bullet').origin == 1));
-        this.node.setPositionX(0);
-        this.node.setPositionY(-210);
-=======
         cc.log("Player is hit by bullet: " + (other.tag == 1));
         if (other.tag != 2) {
             this.node.setPositionX(0);
             this.node.setPositionY(-210);
         }
->>>>>>> 6218e7319b3d10c1f9f5b58cdeca01290f94bffa
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -256,19 +233,17 @@ cc.Class({
         //cc.log(this.mousePressed);
 
         if (this.mousePressed){
-            console.log(this.mousePosX, this.mousePosY, this.node.y - this.mousePosY, this.node.x - this.mousePosX);
+            //console.log(this.mousePosX, this.mousePosY, this.node.y - this.mousePosY, this.node.x - this.mousePosX);
 
             this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
             var playerX = this.node.x + this.node.parent.width/2;
             var playerY = this.node.y + this.node.parent.height/2;
             var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
-            if (this.mousePosX - playerX < 0) {
-                theta = Math.PI - theta;
-            }
-            var speed = 250;
-            this.playerNewBullets[i].getComponent("bullet").speed = speed;
-            this.playerNewBullets[i].getComponent("bullet").theta = theta;
-            this.playerNewBullets[i]._components[2].tag = 2;
+            if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
+            var speed = 500;
+            this.playerNewBullets[i].getComponent('bullet').speed = speed;
+            this.playerNewBullets[i].getComponent('bullet').theta = theta;
+            this.playerNewBullets[i].getComponent(cc.CircleCollider).tag = 2;
             this.playerNewBullets[i].setPosition(this.node.x, this.node.y);
             this.node.parent.addChild(this.playerNewBullets[i]);
         }
