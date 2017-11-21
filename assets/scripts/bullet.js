@@ -13,9 +13,10 @@ cc.Class({
         // },
         // ...
         // 子弹的速度
-        //speed: 0,
+        speed: 0,
         // 子弹速度向量倾角
-        //theta: 0
+        theta: 0,
+        origin: 1
     },
 
     onCollisionEnter: function (other, self) {

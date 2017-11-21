@@ -15,7 +15,7 @@ cc.Class({
         spaceMoving: false,
         Damping: 0.01,
         accel: 0,
-        maxMoveSpeed: 0,
+        maxMoveSpeed: 0
     },
 
     setInputControl: function(){
@@ -110,7 +110,7 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-        cc.log("Player is hit by bullet: " + (other.tag == 1));
+        cc.log("Player is hit by bullet: " + (other.node.getComponent('bullet').origin == 1));
         this.node.setPositionX(0);
         this.node.setPositionY(-210);
     },
@@ -118,7 +118,7 @@ cc.Class({
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
         if (!this.spaceMoving){
-            var speedFactor = (this.slowMode ? 0.25 : 1);
+            var speedFactor = (this.slowMode ? 0.4 : 1);
             if (this.moveLeft) {
                 this.xSpeed = -1 * speedFactor * this.maxMoveSpeed;
             } else if (this.moveRight) {
@@ -132,6 +132,10 @@ cc.Class({
                 this.ySpeed  = -1 * speedFactor * this.maxMoveSpeed;
             } else {
                 this.ySpeed = 0;
+            }
+            if (this.xSpeed != 0 && this.ySpeed != 0) {
+                this.xSpeed = Math.sqrt(2) * this.xSpeed;
+                this.ySpeed = Math.sqrt(2) * this.ySpeed;
             }
         } else if (this.spaceMoving){
             if (this.accLeft) {

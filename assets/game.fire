@@ -449,7 +449,10 @@
     "node": {
       "__id__": 10
     },
-    "_enabled": true
+    "_enabled": true,
+    "speed": 0,
+    "theta": 0,
+    "origin": 1
   },
   {
     "__type__": "cc.CircleCollider",
@@ -613,7 +616,7 @@
     "spaceMoving": false,
     "Damping": 0.01,
     "accel": 400,
-    "maxMoveSpeed": 500
+    "maxMoveSpeed": 300
   },
   {
     "__type__": "cc.CircleCollider",
