@@ -115,7 +115,7 @@ cc.Class({
     },
 
     // use this for initialization
-    onLoad: function () {
+    onLoad: function() {
         this.accLeft = false;
         this.accRight = false;
         this.accUp = false;
@@ -139,19 +139,6 @@ cc.Class({
         this.setMouseControl();
 
         this.playerNewBullets = [];
-
-        /*this.node.on('mousedown', function ( event ) {
-            cc.log('Hello!');
-            this.mousePressed = true;
-            cc.log(this.mousePressed);
-        });
-
-        this.node.on('mouseup', function ( event ) {
-            cc.log('Hi!');
-            this.mousePressed = false;
-            cc.log(this.mousePressed);
-        });*/
-
     },
 
     onCollisionEnter: function (other, self) {
@@ -166,7 +153,7 @@ cc.Class({
     update: function (dt) {
 
         if (!this.spaceMoving){
-            var speedFactor = (this.slowMode ? 0.25 : 1);
+            var speedFactor = (this.slowMode ? 0.4 : 1);
             if (this.moveLeft) {
                 this.xSpeed = -1 * speedFactor * this.maxMoveSpeed;
             } else if (this.moveRight) {
@@ -180,6 +167,10 @@ cc.Class({
                 this.ySpeed  = -1 * speedFactor * this.maxMoveSpeed;
             } else {
                 this.ySpeed = 0;
+            }
+            if (this.xSpeed != 0 && this.ySpeed != 0) {
+                this.xSpeed = Math.sqrt(2) * this.xSpeed;
+                this.ySpeed = Math.sqrt(2) * this.ySpeed;
             }
         } else if (this.spaceMoving){
             if (this.accLeft) {
@@ -242,19 +233,17 @@ cc.Class({
         //cc.log(this.mousePressed);
 
         if (this.mousePressed){
-            console.log(this.mousePosX, this.mousePosY, this.node.y - this.mousePosY, this.node.x - this.mousePosX);
+            //console.log(this.mousePosX, this.mousePosY, this.node.y - this.mousePosY, this.node.x - this.mousePosX);
 
             this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
             var playerX = this.node.x + this.node.parent.width/2;
             var playerY = this.node.y + this.node.parent.height/2;
             var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
-            if (this.mousePosX - playerX < 0) {
-                theta = Math.PI - theta;
-            }
-            var speed = 250;
-            this.playerNewBullets[i].getComponent("bullet").speed = speed;
-            this.playerNewBullets[i].getComponent("bullet").theta = theta;
-            this.playerNewBullets[i]._components[2].tag = 2;
+            if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
+            var speed = 500;
+            this.playerNewBullets[i].getComponent('bullet').speed = speed;
+            this.playerNewBullets[i].getComponent('bullet').theta = theta;
+            this.playerNewBullets[i].getComponent(cc.CircleCollider).tag = 2;
             this.playerNewBullets[i].setPosition(this.node.x, this.node.y);
             this.node.parent.addChild(this.playerNewBullets[i]);
         }
