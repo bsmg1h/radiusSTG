@@ -1,4 +1,4 @@
-var bullet = cc.Class({
+cc.Class({
     extends: cc.Component,
 
     properties: {
@@ -18,10 +18,6 @@ var bullet = cc.Class({
         //theta: 0
     },
 
-    // use this for initialization
-    onLoad: function () {
-    },
-    
     onCollisionEnter: function (other, self) {
         cc.log("Bullet hit");
         this.node.destroy();
@@ -33,10 +29,10 @@ var bullet = cc.Class({
         this.node.x += this.speed * Math.cos(this.theta) * dt;
         this.node.y += this.speed * Math.sin(this.theta) * dt;
         // 若子弹超过边界则被摧毁
-        if (Math.abs(this.node.x) > 480){
+        if (Math.abs(this.node.x) > this.node.parent.parent.width / 2){
             this.node.destroy();
         }
-        if (Math.abs(this.node.y) > 320){
+        if (Math.abs(this.node.y) > this.node.parent.parent.height / 2){
             this.node.destroy();
         }
     }
