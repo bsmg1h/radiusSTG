@@ -515,7 +515,7 @@
       "height": 640
     },
     "_fitWidth": false,
-    "_fitHeight": true
+    "_fitHeight": false
   },
   {
     "__type__": "4f565FycQFGr6Li9YrLAlyE",
@@ -532,7 +532,7 @@
       "__uuid__": "3cf1c7db-7c83-40dd-bd0b-80c300cf4049"
     },
     "bulletInterval": 0.05,
-    "bulletSpeedCoefficient": 801,
+    "bulletSpeedCoefficient": 800,
     "bulletSpeedIntercept": 30,
     "w": 300
   }
