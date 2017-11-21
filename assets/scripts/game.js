@@ -58,7 +58,7 @@ cc.Class({
         //存储子弹数组
         this.newBullets = [];
         //Generate Enemies
-        this.spawnEnemy();
+        //this.spawnEnemy();
         // Collision System
         cc.director.getCollisionManager().enabled = true;
         cc.director.getCollisionManager().enabledDebugDraw = true;
@@ -81,11 +81,11 @@ cc.Class({
         for(var i = 0; i < w; ++i)
         {
             this.newBullets[i] = cc.instantiate(this.bulletPrefab);
-            var theta = this.T * this.T * Math.PI / 8 + 2 * Math.PI * i / w;
             var speed = 250;
+            var theta = T * T * Math.PI / 8 + 2 * Math.PI * i / w;
+            var lagDis = lagT * speed;
             this.newBullets[i].getComponent("bullet").speed = speed;
             this.newBullets[i].getComponent("bullet").theta = theta;
-            var lagDis = lagT * speed;
             this.newBullets[i].setPosition(cc.p(lagDis * Math.cos(theta), lagDis * Math.sin(theta)));
             this.node.addChild(this.newBullets[i]);
         }
