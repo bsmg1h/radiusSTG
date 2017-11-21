@@ -61,6 +61,9 @@ cc.Class({
                     case cc.KEY.shift:
                         self.slowMode = true;
                         break;
+                    case cc.KEY.z:
+                        self.shooting = true;
+                        break;
                 }
             },
             onKeyReleased: function(keyCode, event){
@@ -87,6 +90,9 @@ cc.Class({
                         break;
                     case cc.KEY.shift:
                         self.slowMode = false;
+                        break;
+                    case cc.KEY.z:
+                        self.shooting = false;
                         break;
                 }
             }
@@ -232,14 +238,18 @@ cc.Class({
 
         //cc.log(this.mousePressed);
 
-        if (this.mousePressed){
+        if (this.mousePressed || this.shooting){
             //console.log(this.mousePosX, this.mousePosY, this.node.y - this.mousePosY, this.node.x - this.mousePosX);
 
             this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
             var playerX = this.node.x + this.node.parent.width/2;
             var playerY = this.node.y + this.node.parent.height/2;
-            var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
-            if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
+            if (this.shooting) theta = Math.PI / 2;
+            else
+            {
+                var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
+                if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
+            }
             var speed = 500;
             this.playerNewBullets[i].getComponent('bullet').speed = speed;
             this.playerNewBullets[i].getComponent('bullet').theta = theta;
