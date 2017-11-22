@@ -254,8 +254,10 @@ cc.Class({
                     if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
                 }
                 var speed = 500;
-                this.playerNewBullets[i].getComponent('bullet').speed = speed;
-                this.playerNewBullets[i].getComponent('bullet').theta = theta;
+                this.playerNewBullets[i].addComponent("specialBullet");
+                var bulletComponent = this.playerNewBullets[i].getComponent('specialBullet');
+                bulletComponent.speed = speed;
+                bulletComponent.theta = theta;
                 this.playerNewBullets[i].getComponent(cc.CircleCollider).tag = 2;
                 this.playerNewBullets[i].setPosition(this.node.x, this.node.y);
                 this.node.parent.addChild(this.playerNewBullets[i]);

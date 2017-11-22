@@ -15,6 +15,18 @@ cc.Class({
         enemyPrefab: {
             default: null,
             type: cc.Prefab
+        },
+        test: 1,
+
+        // boss节点，用于获取boss的属性
+        boss: {
+            default: null,
+            type: cc.Node
+        },
+        // player 节点，用于获取player的属性
+        player: {
+            default: null,
+            type: cc.Node
         }
     },
 
@@ -34,9 +46,15 @@ cc.Class({
         //总计时器
         this.T = 0;
         //Generate Enemies
-        //this.spawnEnemy();
+        this.spawnEnemy();
+        //this.a = this.node.getComponent().test;
+        cc.log(this.node.getComponent("game").test);
+        /*this.node.width = 100;
+        cc.log(this.node.width);*/
+
         // Collision System
         cc.director.getCollisionManager().enabled = true;
         cc.director.getCollisionManager().enabledDebugDraw = false;
     }
+
 });
