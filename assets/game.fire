@@ -534,6 +534,13 @@
     "_enabled": true,
     "enemyPrefab": {
       "__uuid__": "3cf1c7db-7c83-40dd-bd0b-80c300cf4049"
+    },
+    "test": 1,
+    "boss": {
+      "__id__": 9
+    },
+    "player": {
+      "__id__": 12
     }
   }
 ]

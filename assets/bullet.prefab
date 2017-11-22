@@ -22,13 +22,10 @@
       },
       {
         "__id__": 3
-      },
-      {
-        "__id__": 4
       }
     ],
     "_prefab": {
-      "__id__": 5
+      "__id__": 4
     },
     "_id": "",
     "_opacity": 255,
@@ -93,15 +90,6 @@
     "_atlas": null
   },
   {
-    "__type__": "abdbfBI/5xFD4OJBgKT+t0p",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 1
-    },
-    "_enabled": true
-  },
-  {
     "__type__": "cc.CircleCollider",
     "_name": "",
     "_objFlags": 0,
@@ -125,7 +113,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "72r2KIfrlBpbyk20xkqMRw",
+    "fileId": "5biaHDqOJK8r2+f7XJz/oc",
     "sync": false
   }
 ]

@@ -52,8 +52,10 @@ cc.Class({
             var speed = 250;
             var theta = T * T * Math.PI / 8 + 2 * Math.PI * i / w;
             var lagDis = lagT * speed;
-            this.newBullets[i].getComponent("bullet").speed = speed;
-            this.newBullets[i].getComponent("bullet").theta = theta;
+            this.newBullets[i].addComponent("bullet");
+            var bulletComponent = this.newBullets[i].getComponent('bullet');
+            bulletComponent.speed = speed;
+            bulletComponent.theta = theta;
             this.newBullets[i].setPosition(cc.p(lagDis * Math.cos(theta), lagDis * Math.sin(theta)));
             this.node.parent.addChild(this.newBullets[i]);
         }
