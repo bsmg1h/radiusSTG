@@ -28,10 +28,23 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
+
         // 子弹的位置按照行动路径更新
+        this.bulletPositionUpdate(dt);
+
+        // 每帧检测
+        this.bulletDestroyIfOut();
+
+    },
+
+    bulletPositionUpdate: function(dt) {
+        // 子弹位置更新函数
         this.node.x += this.speed * Math.cos(this.theta) * dt;
         this.node.y += this.speed * Math.sin(this.theta) * dt;
-        // 若子弹超过边界则被摧毁
+    },
+
+    bulletDestroyIfOut: function() {
+        // 检测子弹是否超过边界的函数，如果超过边界则被摧毁
         if (Math.abs(this.node.x) > this.node.parent.width / 2){
             if(this.tag == 2) cc.log("Destroy. ");
             this.node.destroy();
