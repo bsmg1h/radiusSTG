@@ -390,7 +390,7 @@
     "bulletPrefab": {
       "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
     },
-    "bulletInterval": 0.05
+    "bulletInterval": 10000
   },
   {
     "__type__": "cc.Node",
@@ -484,7 +484,7 @@
       "__id__": 12
     },
     "_enabled": true,
-    "spaceMoving": false,
+    "spaceMoving": true,
     "Damping": 0.01,
     "accel": 400,
     "maxMoveSpeed": 300,
