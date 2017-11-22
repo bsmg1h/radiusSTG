@@ -1,5 +1,5 @@
 cc.Class({
-    extends: cc.Component,
+    extends: require('creature'),
 
     properties: {
         // foo: {
