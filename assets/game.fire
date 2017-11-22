@@ -490,7 +490,8 @@
     "maxMoveSpeed": 300,
     "playerBulletPrefab": {
       "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
-    }
+    },
+    "bulletInterval": 0.1
   },
   {
     "__type__": "cc.CircleCollider",
@@ -506,7 +507,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 5
+    "_radius": 7
   },
   {
     "__type__": "cc.Canvas",
@@ -521,7 +522,7 @@
       "width": 1024,
       "height": 768
     },
-    "_fitWidth": false,
+    "_fitWidth": true,
     "_fitHeight": true
   },
   {

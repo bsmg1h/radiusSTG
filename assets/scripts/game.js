@@ -54,7 +54,7 @@ cc.Class({
 
         // Collision System
         cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = true;
+        cc.director.getCollisionManager().enabledDebugDraw = false;
     }
 
 });

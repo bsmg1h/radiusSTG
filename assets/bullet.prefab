@@ -90,6 +90,7 @@
     "_atlas": null
   },
   {
+
     "__type__": "cc.CircleCollider",
     "_name": "",
     "_objFlags": 0,
@@ -103,7 +104,7 @@
       "x": 0,
       "y": 0
     },
-    "_radius": 10
+    "_radius": 1
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -111,7 +112,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
     },
     "fileId": "5biaHDqOJK8r2+f7XJz/oc",
     "sync": false

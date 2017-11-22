@@ -26,9 +26,8 @@ cc.Class({
         this.node.zIndex = 9999;
         //总计时器
         this.T = 0;
-        this.counter = 0;
         //计数器
-        this.i = -1;
+        this.counter = 0;
         //存储子弹数组
         this.newBullets = [];
     },
