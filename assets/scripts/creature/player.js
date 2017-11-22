@@ -240,11 +240,17 @@ cc.Class({
         }
 
         //cc.log(this.mousePressed);
+        //检测player是否在此时有射击事件，如果是则发射子弹
+        this.ifPlayerShoot(dt);
 
+    },
+
+    ifPlayerShoot : function(dt) {
         if (this.mousePressed || this.shooting){
             this.T += dt;
             if (this.T > this.bulletInterval * this.counter) {
                 this.counter += 1;
+                // 创建
                 this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
                 var playerX = this.node.x + this.node.parent.width / 2;
                 var playerY = this.node.y + this.node.parent.height / 2;
@@ -263,5 +269,6 @@ cc.Class({
                 this.node.parent.addChild(this.playerNewBullets[i]);
             }
         }
-    }
+    },
+
 });
