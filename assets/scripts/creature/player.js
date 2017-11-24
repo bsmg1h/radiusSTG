@@ -23,7 +23,7 @@ cc.Class({
         bulletInterval: 0.1
     },
 
-    setInputControl: function(){
+    setKeyboardInputControl: function(){
         var self = this;
         //添加键盘事件侦听
         cc.eventManager.addListener({
@@ -100,26 +100,7 @@ cc.Class({
         }, self.node);
     },
 
-    setMouseControl: function(){
-        var self = this;
-        //添加鼠标事件侦听
-        cc.eventManager.addListener({
-            event: cc.EventListener.MOUSE,
-            //鼠标按下时，判断是否有我们制定的方向控制键，并设置相对应方向加速
-            onMouseDown: function (event) {
-                self.mousePressed = true;
-                self.mousePosX = event.getLocationX();
-                self.mousePosY = event.getLocationY();
-            },
-            onMouseMove: function(event){
-                self.mousePosX = event.getLocationX();
-                self.mousePosY = event.getLocationY();
-            },
-            onMouseUp: function (event) {
-                self.mousePressed = false;
-            }
-        }, self.node);
-    },
+
 
     // use this for initialization
     onLoad: function() {
@@ -142,8 +123,7 @@ cc.Class({
         this.mousePosY = 0;
         this.mousePressed = false;
 
-        this.setInputControl();
-        this.setMouseControl();
+        this.setKeyboardInputControl();
 
         this.playerNewBullets = [];
         this.T = 0;
