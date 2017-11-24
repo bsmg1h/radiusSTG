@@ -21,7 +21,7 @@ cc.Class({
             type: cc.Prefab
         },
         bulletInterval: 0.3,
-        bulletTag: 2
+        bulletTag: 3
     },
 
 
@@ -47,7 +47,7 @@ cc.Class({
 
         this.mousePosX = 0;
         this.mousePosY = 0;
-        this.mousePressed = false;
+        this.mousePressed = true;
 
 
 
@@ -60,7 +60,7 @@ cc.Class({
         cc.log("Player is hit by bullet: " + (other.tag == 1));
         if (other.tag != this.bulletTag) {
             this.node.setPositionX(0);
-            this.node.setPositionY(-210);
+            this.node.setPositionY(210);
         }
     },
 
@@ -68,18 +68,19 @@ cc.Class({
     update: function (dt) {
 
         //检测player是否在此时有移动事件，如果是则依照指定方式移动位置
-        this.ifPlayerMove(dt);
+        this.ifAi1Move(dt);
 
         //定义于Creature父类，保持角色始终在游戏窗口范围之内
         this.keepInsideBoundary();
 
         //cc.log(this.mousePressed);
         //检测player是否在此时有射击事件，如果是则发射子弹
-        this.ifPlayerShoot(dt);
+        this.ifAi1Shoot(dt);
+        cc.log(this.mousePressed)
 
     },
 
-    ifPlayerMove : function(dt) {
+    ifAi1Move : function(dt) {
         if (!this.spaceMoving){
             var speedFactor = (this.slowMode ? 0.4 : 1);
             if (this.moveLeft) {
@@ -127,7 +128,7 @@ cc.Class({
         this.node.y += this.ySpeed * dt;
     },
 
-    ifPlayerShoot : function(dt) {
+    ifAi1Shoot : function(dt) {
         if (this.mousePressed || this.shooting){
             this.T += dt;
             if (this.T > this.bulletInterval * this.counter) {

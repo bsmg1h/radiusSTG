@@ -20,7 +20,7 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-        if (self.tag != 2) {
+        if (self.tag != 2 & self.tag != 3) {
             cc.log("Bullet hit");
             this.node.destroy();
         }

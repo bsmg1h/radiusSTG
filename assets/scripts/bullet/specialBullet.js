@@ -37,7 +37,8 @@ cc.Class({
         this.bulletDestroyIfOut();
 
         this.node.rotation += dt * 720;
-        this.node.width += 5;
-        this.node.height += 5;
+        this.node.width += 2;
+        this.node.height += 2;
+        this.getComponent(cc.CircleCollider).radius += 0.8;
     }
 });
