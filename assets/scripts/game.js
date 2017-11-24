@@ -46,15 +46,38 @@ cc.Class({
         //总计时器
         this.T = 0;
         //Generate Enemies
-        this.spawnEnemy();
-        //this.a = this.node.getComponent().test;
-        cc.log(this.node.getComponent("game").test);
+        //this.spawnEnemy();
+        //cc.log(this.node.getComponent("game").test);
         /*this.node.width = 100;
         cc.log(this.node.width);*/
 
         // Collision System
         cc.director.getCollisionManager().enabled = true;
         cc.director.getCollisionManager().enabledDebugDraw = false;
-    }
+
+        this.setMouseInputControl();
+    },
+
+    setMouseInputControl: function(){
+        var self = this;
+        //添加鼠标事件侦听
+        cc.eventManager.addListener({
+            event: cc.EventListener.MOUSE,
+            //鼠标按下时，判断是否有我们制定的方向控制键，并设置相对应方向加速
+            onMouseDown: function (event) {
+                self.player.getComponent("player").mousePressed = true;
+                self.player.getComponent("player").mousePosX = event.getLocationX();
+                self.player.getComponent("player").mousePosY = event.getLocationY();
+                cc.log(self.player.getComponent("player").mousePressed);
+            },
+            onMouseMove: function(event){
+                self.player.getComponent("player").mousePosX = event.getLocationX();
+                self.player.getComponent("player").mousePosY = event.getLocationY();
+            },
+            onMouseUp: function (event) {
+                self.player.getComponent("player").mousePressed = false;
+            }
+        }, self.node);
+    },
 
 });
