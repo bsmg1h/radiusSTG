@@ -7,7 +7,7 @@ cc.Class({
         this.id = 0;
         this.blood = 2000;
         this.bulletsType = [];
-        this.bulletInterval = 0.02;
+        this.bulletInterval = 0.05;
         this.speed = 50;
         this.shield = 0;
         this.bomb = 0;

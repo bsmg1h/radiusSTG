@@ -24,10 +24,6 @@ cc.Class({
         bulletTag: 1001
     },
 
-
-
-
-
     // use this for initialization
     onLoad: function() {
         this.accLeft = false;
@@ -54,6 +50,7 @@ cc.Class({
         this.playerNewBullets = [];
         this.T = 0;
         this.counter = 0;
+        this.deathCounter = 0;
     },
 
     onCollisionEnter: function (other, self) {
@@ -61,6 +58,7 @@ cc.Class({
         if (other.tag != this.bulletTag) {
             this.node.setPositionX(0);
             this.node.setPositionY(-210);
+            this.deathCounter += 1;
             if (other.tag == 1101 ){
                 this.node.parent.getComponent("game").ai1Score += 1;
             }

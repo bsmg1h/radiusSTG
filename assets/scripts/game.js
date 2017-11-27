@@ -58,6 +58,12 @@ cc.Class({
         ai1ScorePanel: {
             default: null,
             type: cc.Label
+        },
+
+        // 用于记录Boss HP的计分板
+        bossHPPanel : {
+            default: null,
+            type: cc.Label
         }
     },
 
@@ -91,13 +97,15 @@ cc.Class({
 
         // Collision System
         cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = true;
+        cc.director.getCollisionManager().enabledDebugDraw = false;
 
         this.setMouseInputControl();
         this.setKeyboardInputControl();
 
         if (this.gameMode == 1) {
             cc.log("gamemode: STG");
+            this.bossExist = true;
+            this.player.getComponent("player").bulletInterval = 0.1;
             this.player.getComponent("player").spaceMoving = false;
             this.ai1.destroy();
             this.playerScorePanel.destroy();
@@ -106,16 +114,19 @@ cc.Class({
             cc.log("gamemode: PUBG");
             this.boss.destroy();
             this.player.getComponent("player").spaceMoving = true;
+            this.bossHPPanel.destroy();
         }
 
     },
 
     update: function (dt) {
 
-        this.playerScorePanel.string = "Your Score:" + this.playerScore.toString();
-        this.ai1ScorePanel.string = "Enemy Score:" + this.ai1Score.toString();
-
-        if (this.gameMode == 2) {
+        if(this.gameMode == 1) {
+            if (this.bossExist) this.bossHPPanel.string = "Boss HP:" + this.boss.getComponent("boss").HP.toString();
+            else this.bossHPPanel.string = "CONGRATULATIONS\n" + this.player.getComponent("player").deathCounter.toString() + " DEATH(s)";
+        } else if (this.gameMode == 2) {
+            this.playerScorePanel.string = "Your Score:" + this.playerScore.toString();
+            this.ai1ScorePanel.string = "Enemy Score:" + this.ai1Score.toString();
             this.setAi1MouseInputControl(dt);
             this.setAi1KeyboardInputControl(dt);
         }

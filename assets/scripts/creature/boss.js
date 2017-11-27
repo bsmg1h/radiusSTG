@@ -19,7 +19,8 @@ cc.Class({
             type: cc.Prefab
         },
         bulletInterval: 0.05,
-        bulletTag: 9001
+        bulletTag: 9001,
+        HP: 30000
     },
 
     // use this for initialization
@@ -31,10 +32,22 @@ cc.Class({
         this.counter = 0;
         //存储子弹数组
         this.newBullets = [];
+        //this.HP = 1000;
+    },
+
+    onCollisionEnter: function (other, self) {
+        if (other.tag != this.bulletTag) {
+            this.HP -= 100;
+            cc.log(this.HP);
+        }
     },
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
+        if (this.HP <= 0) {
+            this.node.parent.getComponent("game").bossExist = false;
+            this.node.destroy();
+        }
         this.T += dt;
         if (this.T > this.bulletInterval * this.counter){
             //如果计时器大于子弹发射时间间隔，则发射子弹
