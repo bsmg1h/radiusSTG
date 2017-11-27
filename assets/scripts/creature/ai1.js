@@ -21,7 +21,7 @@ cc.Class({
             type: cc.Prefab
         },
         bulletInterval: 0.3,
-        bulletTag: 3
+        bulletTag: 1101
     },
 
 
@@ -54,13 +54,18 @@ cc.Class({
         this.playerNewBullets = [];
         this.T = 0;
         this.counter = 0;
+
+        cc.log(this.bulletTag);
     },
 
     onCollisionEnter: function (other, self) {
-        cc.log("Player is hit by bullet: " + (other.tag == 1));
+        //cc.log("Player is hit by bullet: " + (other.tag == 1));
         if (other.tag != this.bulletTag) {
             this.node.setPositionX(0);
             this.node.setPositionY(210);
+            if (other.tag == 1001 ){
+                this.node.parent.getComponent("game").playerScore += 1;
+            }
         }
     },
 
@@ -76,7 +81,7 @@ cc.Class({
         //cc.log(this.mousePressed);
         //检测player是否在此时有射击事件，如果是则发射子弹
         this.ifAi1Shoot(dt);
-        cc.log(this.mousePressed)
+        //cc.log(this.mousePressed)
 
     },
 

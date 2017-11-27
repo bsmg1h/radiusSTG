@@ -21,7 +21,7 @@ cc.Class({
             type: cc.Prefab
         },
         bulletInterval: 0.3,
-        bulletTag: 2
+        bulletTag: 1001
     },
 
 
@@ -57,10 +57,13 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-        cc.log("Player is hit by bullet: " + (other.tag == 1));
+        //cc.log("Player is hit by AI 1 bullet: " , other.tag);
         if (other.tag != this.bulletTag) {
             this.node.setPositionX(0);
             this.node.setPositionY(-210);
+            if (other.tag == 1101 ){
+                this.node.parent.getComponent("game").ai1Score += 1;
+            }
         }
     },
 

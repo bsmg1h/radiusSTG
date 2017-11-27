@@ -1,5 +1,12 @@
+var gameMode = cc.Enum({
+    STG: 1,
+    PUBG: 2,
+});
+
 cc.Class({
     extends: cc.Component,
+
+
 
     properties: {
         // foo: {
@@ -12,11 +19,18 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+
+        test: 1,
+
+        gameMode: {
+            default: gameMode.STG,
+            type: gameMode
+        },
+
         enemyPrefab: {
             default: null,
             type: cc.Prefab
         },
-        test: 1,
 
         // boss节点，用于获取boss的属性
         boss: {
@@ -28,16 +42,20 @@ cc.Class({
             default: null,
             type: cc.Node
         },
-        // ai1 节点，用于获取ai1属性
+        // ai1 节点，用于获取ai1属性，AI 1号
         ai1: {
             default: null,
             type: cc.Node
         },
-        playerScore: {
+
+        // 用于记录player得分的计分板
+        playerScorePanel: {
             default: null,
             type: cc.Label
         },
-        ai1Score: {
+
+        // 用于记录ai1得分的计分板
+        ai1ScorePanel: {
             default: null,
             type: cc.Label
         }
@@ -50,7 +68,7 @@ cc.Class({
         var newEnemy = cc.instantiate(this.enemyPrefab);
         this.node.addChild(newEnemy);
         newEnemy.setPosition(cc.p(positionX, positionY));
-        // pass Game instance to star
+        // pass Game instance to enemy
         newEnemy.getComponent('enemy').init(this);
     },
 
@@ -60,6 +78,11 @@ cc.Class({
         this.T = 0;
         //ai1移动计时器
         this.ai1MovingT = 0;
+
+        //
+        this.playerScore = 0;
+        this.ai1Score = 0;
+
         //Generate Enemies
         //this.spawnEnemy();
         //cc.log(this.node.getComponent("game").test);
@@ -68,19 +91,34 @@ cc.Class({
 
         // Collision System
         cc.director.getCollisionManager().enabled = true;
-        cc.director.getCollisionManager().enabledDebugDraw = false;
+        cc.director.getCollisionManager().enabledDebugDraw = true;
 
         this.setMouseInputControl();
         this.setKeyboardInputControl();
 
-        this.setAi1MouseInputControl();
+        if (this.gameMode == 1) {
+            cc.log("gamemode: STG");
+            this.player.getComponent("player").spaceMoving = false;
+            this.ai1.destroy();
+            this.playerScorePanel.destroy();
+            this.ai1ScorePanel.destroy();
+        } else if (this.gameMode == 2) {
+            cc.log("gamemode: PUBG");
+            this.boss.destroy();
+            this.player.getComponent("player").spaceMoving = true;
+        }
 
     },
 
     update: function (dt) {
 
-        this.setAi1MouseInputControl(dt);
-        this.setAi1KeyboardInputControl(dt);
+        this.playerScorePanel.string = "Your Score:" + this.playerScore.toString();
+        this.ai1ScorePanel.string = "Enemy Score:" + this.ai1Score.toString();
+
+        if (this.gameMode == 2) {
+            this.setAi1MouseInputControl(dt);
+            this.setAi1KeyboardInputControl(dt);
+        }
 
     },
 
@@ -94,7 +132,7 @@ cc.Class({
                 self.player.getComponent("player").mousePressed = true;
                 self.player.getComponent("player").mousePosX = event.getLocationX();
                 self.player.getComponent("player").mousePosY = event.getLocationY();
-                cc.log(self.player.getComponent("player").mousePressed);
+                //cc.log(self.player.getComponent("player").mousePressed);
             },
             onMouseMove: function(event){
                 self.player.getComponent("player").mousePosX = event.getLocationX();
@@ -189,7 +227,7 @@ cc.Class({
         this.ai1.getComponent("ai1").mousePressed = true;
         this.ai1.getComponent("ai1").mousePosX = this.player.x + this.node.width / 2 + 80 * cc.randomMinus1To1();
         this.ai1.getComponent("ai1").mousePosY = this.player.y + this.node.height / 2 + 80 * cc.randomMinus1To1();
-        cc.log("ai:",this.ai1.x, this.ai1.y);
+        //cc.log("ai:",this.ai1.x, this.ai1.y);
     },
 
     setAi1KeyboardInputControl: function(dt){
