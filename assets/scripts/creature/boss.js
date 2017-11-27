@@ -18,7 +18,8 @@ cc.Class({
             default: null,
             type: cc.Prefab
         },
-        bulletInterval: 0.05
+        bulletInterval: 0.05,
+        bulletTag: 9001
     },
 
     // use this for initialization
@@ -56,6 +57,7 @@ cc.Class({
             bulletComponent.speed = speed;
             bulletComponent.theta = theta;
             this.newBullets[i].setPosition(cc.p(lagDis * Math.cos(theta), lagDis * Math.sin(theta)));
+            this.newBullets[i].getComponent(cc.CircleCollider).tag = this.bulletTag;
             this.node.parent.addChild(this.newBullets[i]);
         }
     }

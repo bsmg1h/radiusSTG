@@ -399,7 +399,8 @@
     "bulletPrefab": {
       "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
     },
-    "bulletInterval": 100000
+    "bulletInterval": 0.05,
+    "bulletTag": 9001
   },
   {
     "__type__": "cc.Node",
@@ -493,7 +494,7 @@
       "__id__": 12
     },
     "_enabled": true,
-    "spaceMoving": true,
+    "spaceMoving": false,
     "Damping": 0.01,
     "accel": 400,
     "maxMoveSpeed": 300,
@@ -501,7 +502,7 @@
       "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
     },
     "bulletInterval": 0.3,
-    "bulletTag": 2
+    "bulletTag": 1001
   },
   {
     "__type__": "cc.CircleCollider",
@@ -511,7 +512,7 @@
       "__id__": 12
     },
     "_enabled": true,
-    "tag": 0,
+    "tag": 1000,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -619,7 +620,7 @@
       "__uuid__": "e9022c2f-4a4a-4588-9f83-3f9dee1a3e0f"
     },
     "bulletInterval": 0.3,
-    "bulletTag": 3
+    "bulletTag": 1101
   },
   {
     "__type__": "cc.CircleCollider",
@@ -629,7 +630,7 @@
       "__id__": 16
     },
     "_enabled": true,
-    "tag": 3,
+    "tag": 1100,
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -639,7 +640,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "playerScore",
+    "_name": "playerScorePanel",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -713,7 +714,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "aiScore",
+    "_name": "aiScorePanel",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -809,10 +810,11 @@
       "__id__": 2
     },
     "_enabled": true,
+    "test": 1,
+    "gameMode": 1,
     "enemyPrefab": {
       "__uuid__": "3cf1c7db-7c83-40dd-bd0b-80c300cf4049"
     },
-    "test": 1,
     "boss": {
       "__id__": 9
     },
@@ -822,10 +824,10 @@
     "ai1": {
       "__id__": 16
     },
-    "playerScore": {
+    "playerScorePanel": {
       "__id__": 21
     },
-    "ai1Score": {
+    "ai1ScorePanel": {
       "__id__": 23
     }
   }

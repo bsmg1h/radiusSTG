@@ -20,7 +20,7 @@ cc.Class({
     },
 
     onCollisionEnter: function (other, self) {
-        if (self.tag != 2 & self.tag != 3) {
+        if (!((self.tag - other.tag) > 0 && (self.tag - other.tag) < 100)) {
             cc.log("Bullet hit");
             this.node.destroy();
         }
@@ -46,11 +46,11 @@ cc.Class({
     bulletDestroyIfOut: function() {
         // 检测子弹是否超过边界的函数，如果超过边界则被摧毁
         if (Math.abs(this.node.x) > this.node.parent.width / 2){
-            if(this.tag == 2) cc.log("Destroy. ");
+            //if(this.tag == 2) cc.log("Destroy. ");
             this.node.destroy();
         }
         if (Math.abs(this.node.y) > this.node.parent.height / 2){
-            if(this.tag == 2) cc.log("Destroy. ");
+            //if(this.tag == 2) cc.log("Destroy. ");
             this.node.destroy();
         }
     }
