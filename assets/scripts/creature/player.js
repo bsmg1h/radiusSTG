@@ -45,12 +45,11 @@ cc.Class({
         this.mousePosY = 0;
         this.mousePressed = false;
 
-
-
         this.playerNewBullets = [];
         this.T = 0;
         this.counter = 0;
         this.deathCounter = 0;
+        this.node.getComponentInChildren(cc.Sprite).enabled = false;
     },
 
     onCollisionEnter: function (other, self) {
@@ -67,6 +66,9 @@ cc.Class({
 
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
+
+        if (this.slowMode == 1) this.node.getComponentInChildren(cc.Sprite).enabled = true;
+        else this.node.getComponentInChildren(cc.Sprite).enabled = false;
 
         //检测player是否在此时有移动事件，如果是则依照指定方式移动位置
         this.ifPlayerMove(dt);
