@@ -22,7 +22,7 @@ cc.Class({
     // called every frame, uncomment this function to activate update callback
     update: function (dt) {
         // 子弹的位置按照行动路径更新
-        this.node.x += this.speed * Math.cos(this.theta) * dt;
+        /*this.node.x += this.speed * Math.cos(this.theta) * dt;
         this.node.y += this.speed * Math.sin(this.theta) * dt;
         // 若子弹超过边界则被摧毁
         if (Math.abs(this.node.x) > this.node.parent.width / 2){
@@ -32,9 +32,13 @@ cc.Class({
         if (Math.abs(this.node.y) > this.node.parent.height / 2){
             if(this.tag == 2) cc.log("Destroy. ");
             this.node.destroy();
-        }
+        }*/
+        this.bulletPositionUpdate(dt);
+        this.bulletDestroyIfOut();
+
         this.node.rotation += dt * 720;
-        this.node.width += 5;
-        this.node.height += 5;
+        this.node.width += 2;
+        this.node.height += 2;
+        this.getComponent(cc.CircleCollider).radius += 0.8;
     }
 });
