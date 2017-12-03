@@ -1,3 +1,4 @@
+var GameScene = require('game');
 cc.Class({
     extends: cc.Component,
 
@@ -32,7 +33,8 @@ cc.Class({
     playGame: function () {
         var self = this;
         cc.director.loadScene('game', function(err, data) {
-
+            var game = GameScene.instance;
+            game.setGameMode(self.gameMode);
         });
     }
 });
