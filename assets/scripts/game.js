@@ -3,11 +3,11 @@ var gameMode = cc.Enum({
     PUBG: 2,
 });
 
-cc.Class({
+var game = cc.Class({
     extends: cc.Component,
-
-
-
+    statics: {
+        instance: null
+    },
     properties: {
         // foo: {
         //    default: null,      // The default value will be used only when the component attaching
@@ -96,26 +96,31 @@ cc.Class({
         this.setMouseInputControl();
         this.setKeyboardInputControl();
 
-        if (this.gameMode == 1) {
+        game.instance = this;
+    },
+    setGameMode: function(gameMode) {
+        game.instance.gameMode = gameMode;
+        this.validateGameMode();
+    },
+    validateGameMode: function() {
+        if (game.instance.gameMode == 1) {
             cc.log("gamemode: STG");
             this.player.getComponent("player").spaceMoving = false;
             this.ai1.destroy();
             this.playerScorePanel.destroy();
             this.ai1ScorePanel.destroy();
-        } else if (this.gameMode == 2) {
+        } else if (game.instance.gameMode == 2) {
             cc.log("gamemode: PUBG");
             this.boss.destroy();
             this.player.getComponent("player").spaceMoving = true;
         }
-
     },
-
     update: function (dt) {
 
         this.playerScorePanel.string = "Your Score:" + this.playerScore.toString();
         this.ai1ScorePanel.string = "Enemy Score:" + this.ai1Score.toString();
 
-        if (this.gameMode == 2) {
+        if (game.instance.gameMode == 2) {
             this.setAi1MouseInputControl(dt);
             this.setAi1KeyboardInputControl(dt);
         }
