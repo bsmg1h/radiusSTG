@@ -78,8 +78,9 @@ cc.Class({
 
         //cc.log(this.mousePressed);
         //检测player是否在此时有射击事件，如果是则发射子弹
-        this.ifPlayerShoot(dt);
-
+        if (this.mousePressed || this.shooting) {
+            this.playerShoot(dt, this.getTheta());
+        }
     },
 
     ifPlayerMove : function(dt) {
@@ -130,29 +131,33 @@ cc.Class({
         this.node.y += this.ySpeed * dt;
     },
 
-    ifPlayerShoot : function(dt) {
-        if (this.mousePressed || this.shooting){
-            this.T += dt;
-            if (this.T > this.bulletInterval * this.counter) {
-                this.counter += 1;
-                // 创建
-                this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
-                var playerX = this.node.x + this.node.parent.width / 2;
-                var playerY = this.node.y + this.node.parent.height / 2;
-                if (this.shooting) theta = Math.PI / 2;
-                else {
-                    var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
-                    if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
-                }
-                var speed = 500;
-                this.playerNewBullets[i].addComponent("specialBullet");
-                var bulletComponent = this.playerNewBullets[i].getComponent('specialBullet');
-                bulletComponent.speed = speed;
-                bulletComponent.theta = theta;
-                this.playerNewBullets[i].getComponent(cc.CircleCollider).tag = this.bulletTag;
-                this.playerNewBullets[i].setPosition(this.node.x, this.node.y);
-                this.node.parent.addChild(this.playerNewBullets[i]);
-            }
+    getTheta : function() {
+        var playerX = this.node.x + this.node.parent.width / 2;
+        var playerY = this.node.y + this.node.parent.height / 2;
+        if (this.shooting) {
+            var theta = Math.PI / 2;
+        }
+        else {
+            var theta = Math.asin((this.mousePosY - playerY) / Math.sqrt((playerY - this.mousePosY) * (playerY - this.mousePosY) + (playerX - this.mousePosX) * (playerX - this.mousePosX)));
+            if (this.mousePosX - playerX < 0) theta = Math.PI - theta;
+        }
+        return theta
+    },
+
+    playerShoot : function(dt, theta) {
+        this.T += dt;
+        if (this.T > this.bulletInterval * this.counter) {
+            this.counter += 1;
+            // 创建
+            this.playerNewBullets[i] = cc.instantiate(this.playerBulletPrefab);
+            var speed = 500;
+            this.playerNewBullets[i].addComponent("specialBullet");
+            var bulletComponent = this.playerNewBullets[i].getComponent('specialBullet');
+            bulletComponent.speed = speed;
+            bulletComponent.theta = theta;
+            this.playerNewBullets[i].getComponent(cc.CircleCollider).tag = this.bulletTag;
+            this.playerNewBullets[i].setPosition(this.node.x, this.node.y);
+            this.node.parent.addChild(this.playerNewBullets[i]);
         }
     },
 
